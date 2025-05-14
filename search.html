@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search the KEMRI Grant Management Department website for resources, news, and information about grant management.">
+    <meta name="keywords" content="KEMRI, Grant Management, Search, Research Funding, Kenya Medical Research">
+    <meta name="author" content="Kenya Medical Research Institute">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/images/kemri-logo.png">
+    
+    <title>Search Results | KEMRI Grant Management Department</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/search.js" defer></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header role="banner">
+        <div class="container">
+            <div class="logo-container">
+                <img src="assets/images/kemri-logo.png" alt="KEMRI Logo" class="logo">
+                <div class="logo-text">
+                    <h1>KEMRI</h1>
+                    <p>Grant Management Department</p>
+                </div>
+            </div>
+            <nav role="navigation" aria-label="Main Navigation">
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="organization.html">Organizational Structure</a></li>
+                    <li><a href="units.html">Department Units</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="news.html">News & Opportunities</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li class="search-nav">
+                        <form action="search.html" method="get" role="search" class="header-search">
+                            <input type="search" name="q" id="search-input-nav" placeholder="Search..." aria-label="Search website">
+                            <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li aria-current="page">Search Results</li>
+            </ol>
+        </div>
+    </div>
+
+    <main id="main-content" role="main">
+        <section class="search-results">
+            <div class="container">
+                <h2>Search Results</h2>
+                
+                <div class="search-container">
+                    <form action="search.html" method="get" role="search" class="search-form">
+                        <div class="search-input-container">
+                            <input type="search" name="q" id="search-input" placeholder="Search..." aria-label="Search website">
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                        <div class="search-filters">
+                            <div class="filter-group">
+                                <label for="search-category">Filter by category:</label>
+                                <select id="search-category" name="category">
+                                    <option value="all">All Categories</option>
+                                    <option value="pages">Pages</option>
+                                    <option value="resources">Resources</option>
+                                    <option value="news">News & Opportunities</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div id="search-results-container">
+                    <p class="search-info">Enter a search term above to find content across the KEMRI GMD website.</p>
+                    <!-- Search results will be inserted here via JavaScript -->
+                </div>
+                
+                <div class="search-pagination" id="search-pagination" aria-label="Pagination">
+                    <!-- Pagination will be inserted here via JavaScript if needed -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/kemri-logo.png" alt="KEMRI Logo" class="logo">
+                    <p>Kenya Medical Research Institute</p>
+                    <p>Grant Management Department</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="organization.html">Organizational Structure</a></li>
+                        <li><a href="units.html">Department Units</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="news.html">News & Opportunities</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Information</h3>
+                    <p><strong>Address:</strong> P.O. Box 54840-00200, Nairobi, Kenya</p>
+                    <p><strong>Phone:</strong> +254 20 2722541</p>
+                    <p><strong>Email:</strong> gmd@kemri.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Kenya Medical Research Institute. All Rights Reserved.</p>
+                <div class="language-selector">
+                    <label for="language-select">Language:</label>
+                    <select id="language-select" aria-label="Select language">
+                        <option value="en" selected>English</option>
+                        <option value="sw">Swahili</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent" class="cookie-consent" role="alert" aria-live="polite">
+        <div class="cookie-content">
+            <p>We use cookies to improve your experience on our website. By continuing to browse, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="btn btn-sm btn-primary">Accept</button>
+                <button id="cookie-decline" class="btn btn-sm btn-secondary">Decline</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

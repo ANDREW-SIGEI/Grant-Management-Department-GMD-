@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <!-- Styles -->
+  <style>
+    .box { stroke: #333; stroke-width: 2; }
+    .board-box { fill: #4a7ebb; }
+    .dg-box { fill: #8aa2cc; }
+    .director-box { fill: #e6c78e; }
+    .unit-box { fill: #8d5bb9; }
+    .sub-box { fill: #c5e0a5; }
+    .line { stroke: #333; stroke-width: 2; }
+    .text { font-family: Arial, sans-serif; font-weight: bold; text-anchor: middle; }
+    .white-text { fill: #fff; }
+    .title-text { font-size: 14px; }
+    .small-text { font-size: 12px; }
+  </style>
+
+  <!-- Box 1: Board of Directors -->
+  <rect x="300" y="50" width="200" height="50" rx="5" ry="5" class="box board-box" />
+  <text x="400" y="80" class="text white-text title-text">THE BOARD OF DIRECTORS, KEMRI</text>
+  <line x1="400" y1="100" x2="400" y2="130" class="line" />
+
+  <!-- Box 2: Director General & CEO -->
+  <rect x="250" y="130" width="300" height="50" rx="5" ry="5" class="box dg-box" />
+  <text x="400" y="160" class="text white-text title-text">DIRECTOR GENERAL & CEO</text>
+  <line x1="400" y1="180" x2="400" y2="210" class="line" />
+
+  <!-- Box 3: Director Scientific Programmes, Partnerships and Grants Management -->
+  <rect x="115" y="210" width="570" height="50" rx="5" ry="5" class="box director-box" />
+  <text x="400" y="240" class="text title-text">DIRECTOR SCIENTIFIC PROGRAMMES, PARTNERSHIPS AND GRANTS MANAGEMENT</text>
+  <line x1="400" y1="260" x2="400" y2="290" class="line" />
+  <line x1="400" y1="290" x2="150" y2="290" class="line" />
+  <line x1="400" y1="290" x2="650" y2="290" class="line" />
+  <line x1="150" y1="290" x2="150" y2="310" class="line" />
+  <line x1="400" y1="290" x2="400" y2="310" class="line" />
+  <line x1="650" y1="290" x2="650" y2="310" class="line" />
+
+  <!-- Box 4: Pre-Award, Contracts & Compliance Unit -->
+  <rect x="50" y="310" width="200" height="50" rx="5" ry="5" class="box unit-box" />
+  <text x="150" y="330" class="text white-text small-text">Pre-Award, Contracts &</text>
+  <text x="150" y="345" class="text white-text small-text">Compliance Unit</text>
+  <line x1="150" y1="360" x2="150" y2="380" class="line" />
+
+  <!-- Box 5: Deputy Director Grants Management -->
+  <rect x="300" y="310" width="200" height="50" rx="5" ry="5" class="box unit-box" />
+  <text x="400" y="330" class="text white-text small-text">Deputy Director Grants</text>
+  <text x="400" y="345" class="text white-text small-text">Management</text>
+  <line x1="400" y1="360" x2="400" y2="380" class="line" />
+  <line x1="400" y1="380" x2="250" y2="380" class="line" />
+  <line x1="400" y1="380" x2="550" y2="380" class="line" />
+  <line x1="250" y1="380" x2="250" y2="400" class="line" />
+  <line x1="400" y1="380" x2="400" y2="400" class="line" />
+  <line x1="550" y1="380" x2="550" y2="400" class="line" />
+
+  <!-- Box 6: Partnerships & Resource Mobilisation -->
+  <rect x="550" y="310" width="200" height="50" rx="5" ry="5" class="box unit-box" />
+  <text x="650" y="330" class="text white-text small-text">Partnerships & Resource</text>
+  <text x="650" y="345" class="text white-text small-text">Mobilisation</text>
+  <line x1="650" y1="360" x2="650" y2="380" class="line" />
+
+  <!-- Pre-Award Sub-boxes -->
+  <rect x="100" y="380" width="100" height="30" rx="5" ry="5" class="box sub-box" />
+  <text x="150" y="398" class="text small-text">Pre-Award</text>
+
+  <rect x="100" y="420" width="100" height="30" rx="5" ry="5" class="box sub-box" />
+  <text x="150" y="438" class="text small-text">Compliance</text>
+
+  <rect x="70" y="460" width="160" height="30" rx="5" ry="5" class="box sub-box" />
+  <text x="150" y="478" class="text small-text">Monitoring & Evaluation</text>
+
+  <!-- Deputy Director Sub-boxes -->
+  <rect x="200" y="400" width="100" height="30" rx="5" ry="5" class="box sub-box" />
+  <text x="250" y="418" class="text small-text">Human Resource</text>
+
+  <rect x="350" y="400" width="100" height="30" rx="5" ry="5" class="box sub-box" />
+  <text x="400" y="418" class="text small-text">Procurement</text>
+
+  <rect x="480" y="400" width="140" height="30" rx="5" ry="5" class="box sub-box" />
+  <text x="550" y="418" class="text small-text">Grants Finance: Post-Award</text>
+
+  <rect x="500" y="440" width="100" height="30" rx="5" ry="5" class="box sub-box" />
+  <text x="550" y="458" class="text small-text">Compliance</text>
+
+  <!-- Partnerships Sub-boxes -->
+  <rect x="600" y="380" width="100" height="30" rx="5" ry="5" class="box sub-box" />
+  <text x="650" y="398" class="text small-text">Partnerships</text>
+
+  <rect x="570" y="420" width="160" height="30" rx="5" ry="5" class="box sub-box" />
+  <text x="650" y="438" class="text small-text">Resource Mobilization</text>
+</svg> 

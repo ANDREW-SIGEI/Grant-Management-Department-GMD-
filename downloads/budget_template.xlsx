@@ -1,0 +1,73 @@
+KEMRI GRANT MANAGEMENT DEPARTMENT
+RESEARCH BUDGET TEMPLATE
+-------------------------------------
+
+This is a placeholder for the actual Excel file. The real file would contain:
+
+1. PERSONNEL COSTS
+-------------------
+| Position | % Effort | Duration | Base Salary | Requested Amount | Justification |
+|----------|----------|----------|-------------|------------------|---------------|
+| PI       |          |          |             |                  |               |
+| Co-I     |          |          |             |                  |               |
+| Etc.     |          |          |             |                  |               |
+| Subtotal |          |          |             |                  |               |
+
+2. EQUIPMENT
+------------
+| Item | Quantity | Unit Cost | Total Cost | Justification |
+|------|----------|-----------|------------|---------------|
+|      |          |           |            |               |
+| Subtotal |     |           |            |               |
+
+3. SUPPLIES
+-----------
+| Item | Quantity | Unit Cost | Total Cost | Justification |
+|------|----------|-----------|------------|---------------|
+|      |          |           |            |               |
+| Subtotal |     |           |            |               |
+
+4. TRAVEL
+---------
+| Purpose | Destination | No. of Trips | No. of People | Cost per Trip | Total Cost | Justification |
+|---------|-------------|--------------|---------------|---------------|------------|---------------|
+|         |             |              |               |               |            |               |
+| Subtotal |           |              |               |               |            |               |
+
+5. PATIENT COSTS
+----------------
+| Item | No. of Patients | Unit Cost | Total Cost | Justification |
+|------|-----------------|-----------|------------|---------------|
+|      |                 |           |            |               |
+| Subtotal |            |           |            |               |
+
+6. OTHER DIRECT COSTS
+---------------------
+| Item | Quantity | Unit Cost | Total Cost | Justification |
+|------|----------|-----------|------------|---------------|
+|      |          |           |            |               |
+| Subtotal |     |           |            |               |
+
+7. INDIRECT COSTS
+-----------------
+| Item | Base | Rate | Amount | Justification |
+|------|------|------|--------|---------------|
+|      |      |      |        |               |
+| Subtotal |  |      |        |               |
+
+8. TOTAL PROJECT COSTS
+----------------------
+| Category | Amount | Percentage of Total |
+|----------|--------|---------------------|
+| Personnel |      |                     |
+| Equipment |      |                     |
+| Supplies |       |                     |
+| Travel |         |                     |
+| Patient Costs |  |                     |
+| Other Direct Costs | |                  |
+| Indirect Costs |  |                     |
+| TOTAL |         | 100%                 |
+
+9. BUDGET JUSTIFICATION
+-----------------------
+[Provide detailed justification for each budget line item, explaining why each cost is necessary for the successful implementation of the research project.] 

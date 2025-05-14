@@ -1,0 +1,54 @@
+KEMRI Grant Management Department Website
+Required Downloadable Resources
+=================================
+
+This file lists all the downloadable resources needed for the website.
+Replace these placeholder files with actual KEMRI documents before deployment.
+
+Forms & Templates:
+-----------------
+1. concept_note_template.docx - Template for initial research concept notes
+2. full_proposal_template.docx - Comprehensive proposal template
+3. budget_template.xlsx - Excel budget template with formulas
+4. workplan_template.xlsx - Project timeline/Gantt chart template
+5. cv_format.docx - Standardized CV format for grant applications
+6. data_management_plan.docx - Template for data management planning
+7. internal_review_form.pdf - Form for internal proposal review
+8. approval_checklist.pdf - Checklist for institutional approvals
+
+Policies & Guidelines:
+---------------------
+1. research_ethics_policy.pdf - Ethics guidelines for research
+2. grant_management_policy.pdf - Main GMD policy document
+3. financial_guidelines.pdf - Financial management procedures
+4. data_management_policy.pdf - Data handling and sharing policies
+5. intellectual_property_policy.pdf - IP rights and management
+6. conflict_of_interest_policy.pdf - COI disclosure and management
+
+Standard Operating Procedures:
+----------------------------
+1. pre_award_sop.pdf - Procedures for grant application phase
+2. post_award_sop.pdf - Procedures for grant implementation phase
+3. budget_guidelines.pdf - Detailed budgeting instructions
+4. procurement_procedures.pdf - Guidelines for purchases with grant funds
+5. reporting_guidelines.pdf - Instructions for technical/financial reports
+6. closeout_procedures.pdf - Procedures for grant closure
+
+Resources & Tools:
+----------------
+1. grant_writing_guide.pdf - Comprehensive guide to proposal writing
+2. ethics_guide.pdf - Guidance on addressing ethical considerations
+3. grant_writing_toolkit.zip - Collection of templates and examples
+4. budget_calculator.xlsx - Tool for calculating project costs
+5. funder_database.xlsx - List of potential funding sources
+6. proposal_checklist.pdf - Self-assessment tool for proposals
+7. grant_glossary.pdf - Dictionary of grant-related terms
+8. workshop_materials.zip - Training materials from recent workshops
+
+Note:
+-----
+- All documents should use consistent KEMRI branding
+- PDF files should be searchable (not scanned images)
+- Word/Excel files should be properly templated with locked/protected fields where appropriate
+- Ensure all documents are free of confidential information before publishing
+- Consider providing both English and Swahili versions of key documents if applicable 

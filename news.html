@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Opportunities | KEMRI Grant Management Department</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="assets/images/kemri-logo.png" alt="KEMRI Logo" class="logo">
+                <div class="logo-text">
+                    <h1>KEMRI</h1>
+                    <p>Grant Management Department</p>
+                </div>
+            </div>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="organization.html">Organizational Structure</a></li>
+                    <li><a href="units.html">Department Units</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li class="active"><a href="news.html">News & Opportunities</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>News & Opportunities</h1>
+                <p>Stay updated with the latest funding opportunities, events, and announcements</p>
+            </div>
+        </section>
+
+        <!-- Filters Section -->
+        <section class="filters-section">
+            <div class="container">
+                <div class="news-filters">
+                    <div class="filter-group">
+                        <label for="news-category">Category:</label>
+                        <select id="news-category">
+                            <option value="all">All Categories</option>
+                            <option value="funding-opportunities">Funding Opportunities</option>
+                            <option value="events">Events & Workshops</option>
+                            <option value="announcements">Announcements</option>
+                            <option value="success-stories">Success Stories</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="news-year">Year:</label>
+                        <select id="news-year">
+                            <option value="all">All Years</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <input type="text" class="search-input" placeholder="Search news...">
+                        <button class="search-btn" aria-label="Search news"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="button-group">
+                        <button class="filter-btn btn-secondary">Apply Filters</button>
+                        <button class="reset-btn btn-outline">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Funding Opportunities -->
+        <section class="news-section" id="funding-opportunities">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-hand-holding-usd"></i> Current Funding Opportunities</h2>
+                </div>
+                <div class="news-grid">
+                    <div class="news-card opportunity">
+                        <div class="news-date">
+                            <span class="day">15</span>
+                            <span class="month">Dec</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-tag">Deadline: 28 Feb 2024</span>
+                            <h3>NIH Global Infectious Disease Research Grant</h3>
+                            <p>The National Institutes of Health (NIH) is seeking applications for research on infectious diseases that are predominant in or unique to resource-constrained countries.</p>
+                            <div class="news-details">
+                                <span><i class="fas fa-money-bill-wave"></i> Funding: Up to $2.5 million</span>
+                                <span><i class="fas fa-clock"></i> Duration: 5 years</span>
+                            </div>
+                            <a href="#" class="btn-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card opportunity">
+                        <div class="news-date">
+                            <span class="day">02</span>
+                            <span class="month">Dec</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-tag">Deadline: 15 Jan 2024</span>
+                            <h3>Wellcome Trust Collaborative Awards in Science</h3>
+                            <p>Wellcome Trust is offering Collaborative Awards to promote the development of new ideas and speed the pace of discovery in health-related research.</p>
+                            <div class="news-details">
+                                <span><i class="fas fa-money-bill-wave"></i> Funding: Up to £4 million</span>
+                                <span><i class="fas fa-clock"></i> Duration: Up to 5 years</span>
+                            </div>
+                            <a href="#" class="btn-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card opportunity">
+                        <div class="news-date">
+                            <span class="day">20</span>
+                            <span class="month">Nov</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-tag">Deadline: 31 Jan 2024</span>
+                            <h3>Gates Foundation Grand Challenges Africa</h3>
+                            <p>The Bill & Melinda Gates Foundation, in partnership with the African Academy of Sciences, is seeking innovative solutions to address key health challenges in Africa.</p>
+                            <div class="news-details">
+                                <span><i class="fas fa-money-bill-wave"></i> Funding: $100,000 - $1 million</span>
+                                <span><i class="fas fa-clock"></i> Duration: 1-3 years</span>
+                            </div>
+                            <a href="#" class="btn-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer">
+                    <a href="#" class="btn btn-outline">View All Funding Opportunities</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events & Workshops -->
+        <section class="news-section" id="events">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-calendar-alt"></i> Upcoming Events & Workshops</h2>
+                </div>
+                <div class="news-grid">
+                    <div class="news-card event">
+                        <div class="news-date">
+                            <span class="day">10</span>
+                            <span class="month">Jan</span>
+                            <span class="year">2024</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-tag">Workshop</span>
+                            <h3>Grant Writing Workshop: From Concept to Proposal</h3>
+                            <p>A comprehensive workshop on developing competitive research proposals, from initial concept to full proposal development.</p>
+                            <div class="news-details">
+                                <span><i class="fas fa-map-marker-alt"></i> KEMRI Conference Hall</span>
+                                <span><i class="fas fa-clock"></i> 9:00 AM - 4:00 PM</span>
+                            </div>
+                            <a href="#" class="btn-link">Register Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card event">
+                        <div class="news-date">
+                            <span class="day">25</span>
+                            <span class="month">Jan</span>
+                            <span class="year">2024</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-tag">Webinar</span>
+                            <h3>Understanding NIH Funding Mechanisms</h3>
+                            <p>An online session explaining the various NIH funding mechanisms and how to select the most appropriate one for your research.</p>
+                            <div class="news-details">
+                                <span><i class="fas fa-desktop"></i> Virtual Event</span>
+                                <span><i class="fas fa-clock"></i> 3:00 PM - 5:00 PM</span>
+                            </div>
+                            <a href="#" class="btn-link">Register Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card event">
+                        <div class="news-date">
+                            <span class="day">15</span>
+                            <span class="month">Feb</span>
+                            <span class="year">2024</span>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-tag">Training</span>
+                            <h3>Research Budget Development & Financial Management</h3>
+                            <p>A hands-on training session on developing accurate research budgets and managing grant finances effectively.</p>
+                            <div class="news-details">
+                                <span><i class="fas fa-map-marker-alt"></i> KEMRI Training Center</span>
+                                <span><i class="fas fa-clock"></i> 9:00 AM - 3:00 PM</span>
+                            </div>
+                            <a href="#" class="btn-link">Register Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer">
+                    <a href="#" class="btn btn-outline">View All Events</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Announcements -->
+        <section class="news-section" id="announcements">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-bullhorn"></i> Latest Announcements</h2>
+                </div>
+                <div class="news-grid">
+                    <div class="news-card announcement">
+                        <div class="news-date">
+                            <span class="day">05</span>
+                            <span class="month">Dec</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>New Online Grant Application System Launch</h3>
+                            <p>KEMRI has launched a new online grant application system to streamline the proposal submission process. All researchers are advised to create accounts on the new platform.</p>
+                            <a href="#" class="btn-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card announcement">
+                        <div class="news-date">
+                            <span class="day">28</span>
+                            <span class="month">Nov</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>Updated Financial Guidelines for Grant Management</h3>
+                            <p>KEMRI has updated its financial guidelines for grant management to align with new international standards. The new guidelines will take effect from January 2024.</p>
+                            <a href="#" class="btn-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card announcement">
+                        <div class="news-date">
+                            <span class="day">15</span>
+                            <span class="month">Nov</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>New Partnership with Wellcome Trust Announced</h3>
+                            <p>KEMRI has established a new partnership with the Wellcome Trust to enhance capacity building in medical research across Kenya.</p>
+                            <a href="#" class="btn-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer">
+                    <a href="#" class="btn btn-outline">View All Announcements</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section class="news-section" id="success-stories">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-trophy"></i> Success Stories</h2>
+                </div>
+                <div class="news-grid">
+                    <div class="news-card success-story">
+                        <div class="news-date">
+                            <span class="day">10</span>
+                            <span class="month">Dec</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>KEMRI Researcher Secures $3.5M NIH Grant for Malaria Research</h3>
+                            <p>Dr. Sarah Kimani from KEMRI's Centre for Infectious Disease Research has secured a $3.5 million grant from the NIH to conduct groundbreaking malaria research.</p>
+                            <a href="#" class="btn-link">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card success-story">
+                        <div class="news-date">
+                            <span class="day">18</span>
+                            <span class="month">Nov</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>Collaborative TB Research Project Receives International Recognition</h3>
+                            <p>A collaborative tuberculosis research project led by KEMRI researchers has received international recognition for its innovative approach and significant findings.</p>
+                            <a href="#" class="btn-link">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer">
+                    <a href="#" class="btn btn-outline">View All Success Stories</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Sign-Up -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Stay Updated with Latest Opportunities</h2>
+                    <p>Subscribe to our newsletter to receive the latest funding opportunities, events, and announcements directly in your inbox.</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email Address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="consent" required>
+                            <label for="consent">I agree to receive communications from KEMRI Grant Management Department</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/kemri-logo.png" alt="KEMRI Logo" class="logo">
+                    <p>Kenya Medical Research Institute</p>
+                    <p>Grant Management Department</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="organization.html">Organizational Structure</a></li>
+                        <li><a href="units.html">Department Units</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="news.html">News & Opportunities</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> KEMRI Headquarters, Mbagathi Road, Nairobi, Kenya</p>
+                    <p><i class="fas fa-phone"></i> +254 (0) 20 2722541</p>
+                    <p><i class="fas fa-envelope"></i> info@kemri.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Kenya Medical Research Institute. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

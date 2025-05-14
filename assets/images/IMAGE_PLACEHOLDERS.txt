@@ -1,0 +1,62 @@
+KEMRI Grant Management Department Website
+Required Image Placeholders
+===================================
+
+This file lists all the image placeholders needed for the website. 
+Replace these with actual KEMRI images before deployment.
+
+Logo & Branding:
+---------------
+1. kemri-logo.png - The official KEMRI logo
+2. kemri-building.jpg - Exterior photo of KEMRI headquarters
+
+Icons:
+-----
+1. icon-proposal.svg - Icon representing proposal development
+2. icon-management.svg - Icon representing grant management
+3. icon-training.svg - Icon representing training and workshops
+4. icon-collaboration.svg - Icon representing partnerships
+5. icon-document.svg - Icon for policy documents
+6. icon-location.svg - Location icon for contact page
+7. icon-phone.svg - Phone icon for contact page
+8. icon-email.svg - Email icon for contact page
+9. icon-meeting.svg - Meeting/calendar icon for appointments
+10. icon-search.svg - Search icon for search functions
+
+Team Photos:
+-----------
+1. team-director.jpg - Photo of the Department Director
+2. team-manager.jpg - Photo of the Grants Manager
+3. team-financial.jpg - Photo of the Financial Manager
+4. team-coordinator.jpg - Photo of the Programs Coordinator
+5. contact-director.jpg - Contact page photo of the Director
+6. contact-preaward.jpg - Contact page photo of Pre-Award Manager
+7. contact-postaward.jpg - Contact page photo of Post-Award Manager
+8. contact-finance.jpg - Contact page photo of Financial Manager
+
+Content Images:
+-------------
+1. research-team.jpg - Photo of researchers working together
+2. compliance-illustration.jpg - Image related to compliance requirements
+3. research-impact.jpg - Image representing research impact
+4. featured-news.jpg - Featured news headline image
+5. map-placeholder.jpg - Map showing KEMRI location
+
+News Photos:
+-----------
+1. news-workshop.jpg - Image for workshop announcement
+2. news-funding.jpg - Image for funding opportunity
+3. news-policy.jpg - Image for policy update
+4. news-success.jpg - Image for success story
+5. news-partnership.jpg - Image for partnership announcement
+6. news-deadline.jpg - Image for deadline reminder
+7. news-seminar.jpg - Image for seminar announcement
+8. news-report.jpg - Image for annual report
+
+Note:
+-----
+- All photos should be high-quality and professionally appropriate
+- Team photos should be consistent in style (head/shoulder shots with similar background)
+- Icons should follow a consistent style
+- Recommended image formats: .png for icons and logos, .jpg for photos
+- Optimize all images for web to ensure fast loading times 
