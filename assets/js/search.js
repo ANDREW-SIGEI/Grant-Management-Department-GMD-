@@ -406,4 +406,20 @@ function categoryLabel(category) {
         default:
             return 'All Categories';
     }
-} 
+}
+
+/**
+ * Simple search functionality for KEMRI GMD website
+ */
+document.addEventListener("DOMContentLoaded", function() {
+  // Initialize search forms
+  const searchForms = document.querySelectorAll("form[role=search]");
+  searchForms.forEach(form => {
+    form.addEventListener("submit", function(e) {
+      const searchInput = this.querySelector("input[type=search]");
+      if (!searchInput.value.trim()) {
+        e.preventDefault();
+      }
+    });
+  });
+}); 

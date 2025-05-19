@@ -1,0 +1,40 @@
+[
+  {
+    "title": "KEMRI Researchers Receive $5 Million Grant for Malaria Research",
+    "content": "The Kenya Medical Research Institute (KEMRI) has received a $5 million grant from the National Institutes of Health (NIH) to conduct groundbreaking malaria research. The five-year grant will support a team of researchers investigating new approaches to malaria prevention and treatment.",
+    "category": "News",
+    "featured": true,
+    "publishDate": "2023-06-15T00:00:00.000Z"
+  },
+  {
+    "title": "Call for Applications: Research Training Program",
+    "content": "KEMRI is pleased to announce a Call for Applications for its Research Training Program, designed to enhance the capacity of early-career researchers in grant writing and management. The 12-week program will cover identifying funding opportunities, developing competitive research proposals, building effective research teams, managing research grants, and research ethics and compliance.",
+    "category": "Opportunity",
+    "featured": true,
+    "publishDate": "2023-07-20T00:00:00.000Z",
+    "expiryDate": "2023-08-30T00:00:00.000Z"
+  },
+  {
+    "title": "Workshop: Effective Grant Management Practices",
+    "content": "The Grant Management Department is organizing a workshop on Effective Grant Management Practices for KEMRI researchers and administrative staff. This one-day workshop will cover key aspects of grant management, including financial management and reporting, procurement procedures, human resource management, compliance with funder requirements, and risk management.",
+    "category": "Event",
+    "featured": false,
+    "publishDate": "2023-08-10T00:00:00.000Z",
+    "expiryDate": "2023-09-05T00:00:00.000Z"
+  },
+  {
+    "title": "Grant Management Department Launches New Online Portal",
+    "content": "We are excited to announce the launch of our new online Grant Management Portal, designed to streamline the grant application and management process for KEMRI researchers. The portal offers online submission of grant applications, real-time tracking of application status, access to funding opportunities database, financial report generation, document repository for grant-related documents, and communication platform for researchers and grant administrators.",
+    "category": "Announcement",
+    "featured": true,
+    "publishDate": "2023-08-01T00:00:00.000Z"
+  },
+  {
+    "title": "New Funding Opportunity: Global Health Research",
+    "content": "The Wellcome Trust has announced a new funding opportunity for Global Health Research, with a focus on infectious diseases and maternal/child health. Funding ranges from £200,000 - £500,000 per project with a duration of 2-3 years. Focus areas include infectious diseases, maternal and child health, and health systems strengthening.",
+    "category": "Opportunity",
+    "featured": false,
+    "publishDate": "2023-08-05T00:00:00.000Z",
+    "expiryDate": "2023-10-15T00:00:00.000Z"
+  }
+] 

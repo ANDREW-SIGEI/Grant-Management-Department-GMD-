@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Grant Proposal Template",
+    "description": "A standard template for preparing research grant proposals according to KEMRI guidelines.",
+    "category": "Template",
+    "fileUrl": "/downloads/grant_proposal_template.docx",
+    "fileType": "DOCX",
+    "fileSize": 350,
+    "featured": true,
+    "accessLevel": "Public",
+    "downloadCount": 145
+  },
+  {
+    "title": "Budget Preparation Guide",
+    "description": "Comprehensive guide to developing research budgets, including allowable expenses, cost sharing, and indirect costs.",
+    "category": "Guide",
+    "fileUrl": "/downloads/budget_preparation_guide.pdf",
+    "fileType": "PDF",
+    "fileSize": 520,
+    "featured": true,
+    "accessLevel": "Public",
+    "downloadCount": 98
+  },
+  {
+    "title": "Standard Operating Procedures for Grant Management",
+    "description": "Detailed operating procedures for managing grants at KEMRI, from award notification to project closeout.",
+    "category": "Policy",
+    "fileUrl": "/downloads/sop_grant_management.pdf",
+    "fileType": "PDF",
+    "fileSize": 780,
+    "featured": false,
+    "accessLevel": "Public",
+    "downloadCount": 72
+  },
+  {
+    "title": "Research Collaboration Agreement Template",
+    "description": "Template for establishing research collaborations with other institutions, including provisions for intellectual property and data sharing.",
+    "category": "Template",
+    "fileUrl": "/downloads/collaboration_agreement_template.docx",
+    "fileType": "DOCX",
+    "fileSize": 420,
+    "featured": false,
+    "accessLevel": "Public",
+    "downloadCount": 65
+  },
+  {
+    "title": "Grant Close-out Checklist",
+    "description": "Checklist for ensuring all requirements are met when closing out a research grant, including financial reports, technical reports, and equipment disposition.",
+    "category": "Form",
+    "fileUrl": "/downloads/grant_closeout_checklist.pdf",
+    "fileType": "PDF",
+    "fileSize": 280,
+    "featured": false,
+    "accessLevel": "Public",
+    "downloadCount": 53
+  },
+  {
+    "title": "Funder Database",
+    "description": "Comprehensive database of potential funding sources for health research, including contact information and funding priorities.",
+    "category": "Tool",
+    "fileUrl": "/downloads/funder_database.xlsx",
+    "fileType": "XLSX",
+    "fileSize": 1200,
+    "featured": true,
+    "accessLevel": "Public",
+    "downloadCount": 210
+  },
+  {
+    "title": "Data Management Plan Template",
+    "description": "Template for developing a data management plan for research projects, covering data collection, storage, sharing, and long-term preservation.",
+    "category": "Template",
+    "fileUrl": "/downloads/data_management_plan_template.docx",
+    "fileType": "DOCX",
+    "fileSize": 380,
+    "featured": false,
+    "accessLevel": "Public",
+    "downloadCount": 87
+  },
+  {
+    "title": "Research Ethics Application Guide",
+    "description": "Guide to preparing and submitting applications for ethical review of research involving human subjects.",
+    "category": "Guide",
+    "fileUrl": "/downloads/ethics_application_guide.pdf",
+    "fileType": "PDF",
+    "fileSize": 630,
+    "featured": false,
+    "accessLevel": "Public",
+    "downloadCount": 112
+  },
+  {
+    "title": "Procurement Procedures for Grant-Funded Projects",
+    "description": "Procedures for procuring goods and services using grant funds, ensuring compliance with funder requirements and institutional policies.",
+    "category": "Policy",
+    "fileUrl": "/downloads/procurement_procedures.pdf",
+    "fileType": "PDF",
+    "fileSize": 540,
+    "featured": false,
+    "accessLevel": "Public",
+    "downloadCount": 68
+  },
+  {
+    "title": "Annual Research Report Template",
+    "description": "Template for preparing annual reports on research progress for funders and institutional review.",
+    "category": "Template",
+    "fileUrl": "/downloads/annual_report_template.docx",
+    "fileType": "DOCX",
+    "fileSize": 410,
+    "featured": false,
+    "accessLevel": "Public",
+    "downloadCount": 79
+  }
+] 

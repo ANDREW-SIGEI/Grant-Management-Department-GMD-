@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed information about funding opportunities for research at KEMRI">
+    <meta name="keywords" content="KEMRI, Grant Management, Research Funding, Opportunities, Grants, Details">
+    <meta name="author" content="Kenya Medical Research Institute">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/images/kemrilogo.png">
+    
+    <title>Funding Opportunity Details | KEMRI Grant Management Department</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="assets/js/main.js" defer></script>
+    
+    <style>
+        /* Funding detail page specific styles */
+        .funding-detail-header {
+            background: #f5f5f5;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .funding-detail-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        
+        .funding-detail-meta-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .funding-detail-meta-group h4 {
+            margin-bottom: 0.5rem;
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .funding-detail-meta-value {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .funding-detail-meta-value.urgent {
+            color: #dc3545;
+        }
+        
+        .funding-detail-section {
+            margin-bottom: 2rem;
+        }
+        
+        .funding-detail-section h3 {
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .funding-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .funding-tag {
+            background: #e9f0f8;
+            color: #0056b3;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        
+        .funding-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .funding-actions .btn {
+            min-width: 150px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .funding-detail-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header role="banner">
+        <div class="container">
+            <div class="logo-container">
+                <a href="https://www.kemri.org/" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/kemrilogo.png" alt="KEMRI Logo" class="logo">
+                </a>
+                <div class="logo-text">
+                    <h1>KEMRI</h1>
+                    <p>Grant Management Department</p>
+                </div>
+            </div>
+            <nav role="navigation" aria-label="Main Navigation">
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="organization.html">Organizational Structure</a></li>
+                    <li><a href="units.html">Department Units</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li class="active"><a href="funding.html">Funding Opportunities</a></li>
+                    <li><a href="news.html">News & Opportunities</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li class="search-nav">
+                        <form action="search.html" method="get" role="search" class="header-search">
+                            <input type="search" name="q" id="search-input-nav" placeholder="Search..." aria-label="Search website">
+                            <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="funding.html">Funding Opportunities</a></li>
+                <li aria-current="page" id="funding-breadcrumb-title">Funding Opportunity Details</li>
+            </ol>
+        </div>
+    </div>
+
+    <main id="main-content" role="main">
+        <section class="page-header">
+            <div class="container">
+                <h2 id="funding-title">Funding Opportunity Details</h2>
+                <p id="funding-funder"></p>
+            </div>
+        </section>
+
+        <section class="funding-detail">
+            <div class="container">
+                <div id="loading-indicator" class="loading">
+                    <p>Loading funding opportunity details...</p>
+                </div>
+                
+                <div id="funding-content" style="display: none;">
+                    <div class="funding-detail-header">
+                        <div class="funding-detail-meta">
+                            <div class="funding-detail-meta-group">
+                                <h4>Deadline</h4>
+                                <p class="funding-detail-meta-value" id="funding-deadline"></p>
+                            </div>
+                            
+                            <div class="funding-detail-meta-group">
+                                <h4>Funding Range</h4>
+                                <p class="funding-detail-meta-value" id="funding-amount"></p>
+                            </div>
+                            
+                            <div class="funding-detail-meta-group">
+                                <h4>Eligibility</h4>
+                                <p class="funding-detail-meta-value" id="funding-eligibility"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="funding-detail-section">
+                        <h3>Research Areas</h3>
+                        <div class="funding-tags" id="funding-areas">
+                            <!-- Research areas will be inserted here -->
+                        </div>
+                    </div>
+                    
+                    <div class="funding-detail-section">
+                        <h3>Description</h3>
+                        <div id="funding-description">
+                            <!-- Description will be inserted here -->
+                        </div>
+                    </div>
+                    
+                    <div class="funding-detail-section">
+                        <h3>Application Information</h3>
+                        <div id="funding-application-info">
+                            <!-- Application info will be inserted here -->
+                        </div>
+                    </div>
+                    
+                    <div class="funding-detail-section">
+                        <h3>Contact Information</h3>
+                        <div id="funding-contact-info">
+                            <!-- Contact info will be inserted here -->
+                        </div>
+                    </div>
+                    
+                    <div class="funding-actions">
+                        <a href="#" id="funding-apply-link" class="btn btn-primary" target="_blank" rel="noopener">Apply Now</a>
+                        <button id="funding-save-button" class="btn btn-secondary">
+                            <i class="far fa-bookmark"></i> Save
+                        </button>
+                        <a href="funding.html" class="btn btn-outline">Back to Opportunities</a>
+                    </div>
+                </div>
+                
+                <div id="error-message" style="display: none;">
+                    <p>Failed to load funding opportunity details. Please try again later.</p>
+                    <a href="funding.html" class="btn btn-secondary">Back to Opportunities</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="related-opportunities">
+            <div class="container">
+                <h2>Related Funding Opportunities</h2>
+                <div id="related-opportunities-list">
+                    <!-- Related opportunities will be inserted here -->
+                    <p>Loading related opportunities...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="https://www.kemri.org/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/kemrilogo.png" alt="KEMRI Logo" class="logo">
+                    </a>
+                    <p>Kenya Medical Research Institute</p>
+                    <p>Grant Management Department</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="organization.html">Organizational Structure</a></li>
+                        <li><a href="units.html">Department Units</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="funding.html">Funding Opportunities</a></li>
+                        <li><a href="news.html">News & Opportunities</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Information</h3>
+                    <p><strong>Address:</strong> P.O. Box 54840-00200, Nairobi, Kenya</p>
+                    <p><strong>Phone:</strong> +254 20 2722541</p>
+                    <p><strong>Email:</strong> gmd@kemri.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Kenya Medical Research Institute. All Rights Reserved.</p>
+                <div class="language-selector">
+                    <label for="language-select">Language:</label>
+                    <select id="language-select" aria-label="Select language">
+                        <option value="en" selected>English</option>
+                        <option value="sw">Swahili</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the funding opportunity ID from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const opportunityId = urlParams.get('id');
+            
+            if (!opportunityId) {
+                // If no ID provided, redirect to the funding page
+                window.location.href = 'funding.html';
+                return;
+            }
+            
+            // Fetch the funding opportunity details
+            fetchFundingOpportunity(opportunityId);
+            
+            // Add event listener for save button
+            document.getElementById('funding-save-button').addEventListener('click', function() {
+                saveOpportunity(opportunityId);
+            });
+        });
+        
+        async function fetchFundingOpportunity(id) {
+            try {
+                const response = await fetch(`/api/funding/${id}`);
+                
+                if (!response.ok) {
+                    throw new Error('Failed to fetch funding opportunity details');
+                }
+                
+                const opportunity = await response.json();
+                
+                // Update the UI with the opportunity details
+                displayFundingOpportunity(opportunity);
+                
+                // Fetch related opportunities
+                fetchRelatedOpportunities(opportunity.researchAreas[0]);
+            } catch (error) {
+                console.error('Error fetching funding opportunity:', error);
+                document.getElementById('loading-indicator').style.display = 'none';
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+        
+        function displayFundingOpportunity(opportunity) {
+            // Update page title
+            document.title = `${opportunity.title} | KEMRI Grant Management Department`;
+            
+            // Update breadcrumbs and headers
+            document.getElementById('funding-breadcrumb-title').textContent = opportunity.title;
+            document.getElementById('funding-title').textContent = opportunity.title;
+            document.getElementById('funding-funder').textContent = opportunity.funder;
+            
+            // Format deadline
+            const deadlineDate = new Date(opportunity.applicationDeadline);
+            const formattedDeadline = deadlineDate.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            // Check if deadline is urgent (within 7 days)
+            const today = new Date();
+            const deadlineDays = Math.floor((deadlineDate - today) / (1000 * 60 * 60 * 24));
+            const isUrgent = deadlineDays <= 7 && deadlineDays >= 0;
+            
+            const deadlineElement = document.getElementById('funding-deadline');
+            deadlineElement.textContent = formattedDeadline;
+            if (isUrgent) {
+                deadlineElement.classList.add('urgent');
+            }
+            
+            // Format funding amount
+            const minFunding = opportunity.minFunding ? `$${opportunity.minFunding.toLocaleString()}` : '';
+            const maxFunding = opportunity.maxFunding ? `$${opportunity.maxFunding.toLocaleString()}` : '';
+            let fundingRange = '';
+            
+            if (minFunding && maxFunding) {
+                fundingRange = `${minFunding} - ${maxFunding}`;
+            } else if (minFunding) {
+                fundingRange = `From ${minFunding}`;
+            } else if (maxFunding) {
+                fundingRange = `Up to ${maxFunding}`;
+            } else {
+                fundingRange = 'Not specified';
+            }
+            
+            document.getElementById('funding-amount').textContent = fundingRange;
+            
+            // Update eligibility
+            document.getElementById('funding-eligibility').textContent = opportunity.eligibility;
+            
+            // Update research areas
+            const areasElement = document.getElementById('funding-areas');
+            areasElement.innerHTML = '';
+            
+            opportunity.researchAreas.forEach(area => {
+                const tagElement = document.createElement('span');
+                tagElement.className = 'funding-tag';
+                tagElement.textContent = area;
+                areasElement.appendChild(tagElement);
+            });
+            
+            // Update description
+            document.getElementById('funding-description').innerHTML = `<p>${opportunity.description}</p>`;
+            
+            // Update application information
+            let applicationInfo = '<dl>';
+            
+            if (opportunity.applicationLink) {
+                applicationInfo += `
+                    <dt>Application Link:</dt>
+                    <dd><a href="${opportunity.applicationLink}" target="_blank" rel="noopener">${opportunity.applicationLink}</a></dd>
+                `;
+                
+                // Also update the "Apply Now" button
+                document.getElementById('funding-apply-link').href = opportunity.applicationLink;
+            } else {
+                document.getElementById('funding-apply-link').style.display = 'none';
+            }
+            
+            if (opportunity.announcementDate) {
+                const announcementDate = new Date(opportunity.announcementDate);
+                const formattedAnnouncement = announcementDate.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+                
+                applicationInfo += `
+                    <dt>Announcement Date:</dt>
+                    <dd>${formattedAnnouncement}</dd>
+                `;
+            }
+            
+            if (opportunity.applicationTips) {
+                applicationInfo += `
+                    <dt>Application Tips:</dt>
+                    <dd>${opportunity.applicationTips}</dd>
+                `;
+            }
+            
+            applicationInfo += '</dl>';
+            document.getElementById('funding-application-info').innerHTML = applicationInfo;
+            
+            // Update contact information
+            let contactInfo = '<dl>';
+            
+            if (opportunity.contactPerson) {
+                contactInfo += `
+                    <dt>Contact Person:</dt>
+                    <dd>${opportunity.contactPerson}</dd>
+                `;
+            }
+            
+            if (opportunity.contactEmail) {
+                contactInfo += `
+                    <dt>Contact Email:</dt>
+                    <dd><a href="mailto:${opportunity.contactEmail}">${opportunity.contactEmail}</a></dd>
+                `;
+            }
+            
+            contactInfo += '</dl>';
+            document.getElementById('funding-contact-info').innerHTML = contactInfo;
+            
+            // Show the content and hide loading indicator
+            document.getElementById('loading-indicator').style.display = 'none';
+            document.getElementById('funding-content').style.display = 'block';
+        }
+        
+        async function fetchRelatedOpportunities(researchArea) {
+            if (!researchArea) return;
+            
+            try {
+                const response = await fetch(`/api/funding?researchArea=${encodeURIComponent(researchArea)}`);
+                
+                if (!response.ok) {
+                    throw new Error('Failed to fetch related opportunities');
+                }
+                
+                const opportunities = await response.json();
+                
+                // Filter out the current opportunity and limit to 3 related opportunities
+                const currentId = new URLSearchParams(window.location.search).get('id');
+                const relatedOpportunities = opportunities
+                    .filter(opp => opp._id !== currentId)
+                    .slice(0, 3);
+                
+                // Update the UI with related opportunities
+                displayRelatedOpportunities(relatedOpportunities);
+            } catch (error) {
+                console.error('Error fetching related opportunities:', error);
+                document.getElementById('related-opportunities-list').innerHTML = '<p>No related opportunities found.</p>';
+            }
+        }
+        
+        function displayRelatedOpportunities(opportunities) {
+            const relatedListElement = document.getElementById('related-opportunities-list');
+            
+            if (opportunities.length === 0) {
+                relatedListElement.innerHTML = '<p>No related opportunities found.</p>';
+                return;
+            }
+            
+            // Create HTML for each related opportunity
+            let relatedHTML = '<div class="related-grid">';
+            
+            opportunities.forEach(opportunity => {
+                // Format deadline
+                const deadlineDate = new Date(opportunity.applicationDeadline);
+                const formattedDeadline = deadlineDate.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                });
+                
+                relatedHTML += `
+                    <div class="related-card">
+                        <h3>${opportunity.title}</h3>
+                        <p class="related-funder">${opportunity.funder}</p>
+                        <p class="related-deadline">Deadline: ${formattedDeadline}</p>
+                        <a href="funding-detail.html?id=${opportunity._id}" class="btn btn-sm btn-outline">View Details</a>
+                    </div>
+                `;
+            });
+            
+            relatedHTML += '</div>';
+            relatedListElement.innerHTML = relatedHTML;
+        }
+        
+        function saveOpportunity(id) {
+            // For now, just change the button appearance
+            const button = document.getElementById('funding-save-button');
+            button.innerHTML = '<i class="fas fa-bookmark"></i> Saved';
+            button.disabled = true;
+            
+            // In a full implementation, this would connect to an API endpoint to save the opportunity
+            // to the user's profile or a saved list, which would require user authentication
+        }
+    </script>
+</body>
+</html> 

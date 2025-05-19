@@ -32,9 +32,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/search.js" defer></script>
+    <script src="assets/js/form-validation.js" defer></script>
+    <script src="assets/js/enhanced-navigation.js" defer></script>
+    <script src="assets/js/filter-resources.js" defer></script>
+    <script src="assets/js/accessibility.js" defer></script>
+    <script src="assets/js/image-optimization.js" defer></script>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="visually-hidden skip-link">Skip to main content</a>
     <header role="banner">
         <div class="container">
             <div class="logo-container">
@@ -69,6 +74,7 @@
             </nav>
         </div>
     </header>
+    <div id="breadcrumbs"></div>
 
     <main id="main-content" role="main">
         <section class="hero" aria-labelledby="hero-heading">
@@ -76,6 +82,19 @@
                 <h2 id="hero-heading">Supporting Research Excellence</h2>
                 <p>The Grant Management Department provides comprehensive support for researchers seeking funding opportunities.</p>
                 <a href="units.html" class="btn btn-primary">Explore Our Services</a>
+            </div>
+        </section>
+
+        <section class="featured-project" aria-labelledby="featured-project-heading">
+            <div class="container" style="display:flex;flex-wrap:wrap;align-items:center;gap:2rem;background:#f8fdfb;border-radius:12px;box-shadow:0 2px 8px rgba(0,123,94,0.06);padding:2rem 1rem;margin-bottom:2rem;">
+                <div style="flex:1;min-width:220px;">
+                    <img src="assets/images/research-team.jpg" alt="Featured Project: Malaria Vaccine Efficacy Study" style="border-radius:10px;box-shadow:0 2px 8px rgba(0,123,94,0.10);max-width:100%;height:auto;">
+                </div>
+                <div style="flex:2;min-width:220px;">
+                    <h2 id="featured-project-heading">Featured Project: Malaria Vaccine Efficacy Study</h2>
+                    <p>This groundbreaking project evaluates the efficacy and safety of a novel malaria vaccine in high-transmission regions of Kenya. The study involves collaboration with international partners and aims to reduce malaria-related morbidity and mortality.</p>
+                    <a href="projects.html" class="btn btn-primary">Learn More About Our Projects</a>
+                </div>
             </div>
         </section>
 
@@ -177,6 +196,46 @@
         </section>
     </main>
 
+    <section class="impact-stats" aria-labelledby="impact-stats-heading">
+        <div class="container">
+            <h2 id="impact-stats-heading">Our Impact</h2>
+            <div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem;text-align:center;">
+                <div class="stat-card" style="background:#f4f8fa;border-radius:10px;box-shadow:0 2px 8px rgba(0,86,179,0.08);padding:1.5rem;">
+                    <div class="stat-number" style="font-size:2.5rem;font-weight:700;color:#007b5e;">120+</div>
+                    <div class="stat-label">Grants Managed</div>
+                </div>
+                <div class="stat-card" style="background:#f4f8fa;border-radius:10px;box-shadow:0 2px 8px rgba(0,86,179,0.08);padding:1.5rem;">
+                    <div class="stat-number" style="font-size:2.5rem;font-weight:700;color:#007b5e;">300+</div>
+                    <div class="stat-label">Researchers Supported</div>
+                </div>
+                <div class="stat-card" style="background:#f4f8fa;border-radius:10px;box-shadow:0 2px 8px rgba(0,86,179,0.08);padding:1.5rem;">
+                    <div class="stat-number" style="font-size:2.5rem;font-weight:700;color:#007b5e;">25</div>
+                    <div class="stat-label">International Partners</div>
+                </div>
+                <div class="stat-card" style="background:#f4f8fa;border-radius:10px;box-shadow:0 2px 8px rgba(0,86,179,0.08);padding:1.5rem;">
+                    <div class="stat-number" style="font-size:2.5rem;font-weight:700;color:#007b5e;">$50M+</div>
+                    <div class="stat-label">Total Funding</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" aria-labelledby="testimonials-heading">
+        <div class="container">
+            <h2 id="testimonials-heading">What Our Partners Say</h2>
+            <div class="testimonials-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;">
+                <blockquote class="testimonial-card" style="background:#f8fdfb;border-radius:10px;box-shadow:0 2px 8px rgba(0,123,94,0.08);padding:1.5rem;">
+                    <p>“KEMRI's Grant Management Department has been instrumental in helping us secure and manage international research funding. Their professionalism is unmatched.”</p>
+                    <footer>— Dr. Amina Otieno, Researcher</footer>
+                </blockquote>
+                <blockquote class="testimonial-card" style="background:#f8fdfb;border-radius:10px;box-shadow:0 2px 8px rgba(0,123,94,0.08);padding:1.5rem;">
+                    <p>“Our partnership with KEMRI has led to groundbreaking discoveries in public health. The support from the GMD team is world-class.”</p>
+                    <footer>— Prof. John Smith, International Partner</footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
     <footer role="contentinfo">
         <div class="container">
             <div class="footer-content">
@@ -197,7 +256,7 @@
                         <li><a href="news.html">News & Opportunities</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                         <li><a href="sitemap.html">Sitemap</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">

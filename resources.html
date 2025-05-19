@@ -9,11 +9,14 @@
     <script src="assets/js/main.js" defer></script>
 </head>
 <body>
+<a href="#main-content" class="visually-hidden skip-link">Skip to main content</a>
     <!-- Header -->
     <header>
         <div class="container">
             <div class="logo-container">
+                <a href="https://www.kemri.org/" target="_blank" rel="noopener noreferrer">
                 <img src="assets/images/kemrilogo.png" alt="KEMRI Logo" class="logo">
+                </a>
                 <div class="logo-text">
                     <h1>KEMRI</h1>
                     <p>Grant Management Department</p>
@@ -36,6 +39,7 @@
             </nav>
         </div>
     </header>
+    <div id="breadcrumbs"></div>
 
     <main>
         <!-- Page Header -->
@@ -131,8 +135,8 @@
                         <div class="resource-details">
                             <h3>Research Ethics Policy</h3>
                             <p>KEMRI's ethical guidelines for conducting medical and health research.</p>
-                            <a href="downloads/research_ethics_policy.pdf" class="resource-link">
-                                <i class="fas fa-download"></i> Download Policy
+                            <a href="research_ethics_policy.html" class="resource-link">
+                                <i class="fas fa-book-open"></i> View Policy
                             </a>
                         </div>
                     </div>
@@ -144,8 +148,8 @@
                         <div class="resource-details">
                             <h3>Grant Management Policy</h3>
                             <p>Comprehensive policy outlining the management of grants at KEMRI.</p>
-                            <a href="downloads/grant_management_policy.pdf" class="resource-link">
-                                <i class="fas fa-download"></i> Download Policy
+                            <a href="grant_management_policy.html" class="resource-link">
+                                <i class="fas fa-book-open"></i> View Policy
                             </a>
                         </div>
                     </div>
@@ -306,7 +310,7 @@
         </section>
 
         <!-- Partner Resources -->
-        <section class="resource-section" id="partner-resources">
+        <section class="resource-section" id="partner">
             <div class="container">
                 <div class="resource-header">
                     <h2><i class="fas fa-handshake"></i> Partner Resources</h2>
@@ -315,33 +319,33 @@
                 <div class="resource-grid">
                     <div class="resource-card">
                         <div class="resource-icon">
-                            <i class="fas fa-external-link-alt"></i>
+                            <i class="fas fa-hospital"></i>
                         </div>
                         <div class="resource-details">
-                            <h3>AMPATH Kenya</h3>
-                            <p>Access comprehensive policies, proposal tools, and grant resources from AMPATH Kenya including templates, policies, and research working group tools.</p>
-                            <a href="https://www.ampathkenya.org/research-resources" class="resource-link" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-external-link-alt"></i> Visit AMPATH Resources
+                            <h3>KEMRI Kenya</h3>
+                            <p>Access comprehensive policies, proposal tools, and grant resources from KEMRI Kenya including templates, policies, and research working group tools.</p>
+                            <a href="https://www.kemri.org/resources" class="resource-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Visit KEMRI Resources
                             </a>
                         </div>
                     </div>
                     
                     <div class="resource-card">
                         <div class="resource-icon">
-                            <i class="fas fa-file-pdf"></i>
+                            <i class="fas fa-book"></i>
                         </div>
                         <div class="resource-details">
-                            <h3>AMPATH Research Guide</h3>
-                            <p>Overview of AMPATH's research programs, facilities, and policies for potential collaborators and researchers.</p>
-                            <a href="downloads/ampath_research_guide.pdf" class="resource-link">
+                            <h3>KEMRI Research Guide</h3>
+                            <p>Overview of KEMRI's research programs, facilities, and policies for potential collaborators and researchers.</p>
+                            <a href="downloads/kemri_research_guide.pdf" class="resource-link">
                                 <i class="fas fa-download"></i> Download Guide
                             </a>
                         </div>
                     </div>
                     
-                    <div class="resource-card resource-empty">
+                    <div class="resource-card">
                         <div class="resource-icon">
-                            <i class="fas fa-plus-circle"></i>
+                            <i class="fas fa-clock"></i>
                         </div>
                         <div class="resource-details">
                             <h3>More Partners Coming Soon</h3>
@@ -352,8 +356,104 @@
             </div>
         </section>
 
-        <!-- Resource Request -->
-        <section class="resource-request">
+        <!-- FAQ Section -->
+        <section class="resource-section" id="faq">
+            <div class="container">
+                <div class="resource-header">
+                    <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+                    <p>Common questions about the grant application and management process</p>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What is the first step in applying for a grant?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The first step is to develop a concept note that outlines your research idea, objectives, methodology, and potential impact. You can use our <a href="downloads/concept_note_template.docx">Concept Note Template</a> to get started. Once your concept note is ready, submit it to the Grant Management Department for initial review and feedback before developing a full proposal.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How long does the ethics review process take?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The ethics review process typically takes 4-6 weeks from submission to approval, depending on the complexity of the research and whether revisions are required. We recommend building this timeframe into your project planning. Please review our <a href="research_ethics_policy.html">Research Ethics Policy</a> for detailed information about the review process.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What support does the Grant Management Department provide for budget preparation?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our department provides comprehensive support for budget preparation, including:</p>
+                            <ul>
+                                <li>Budget templates and guidelines</li>
+                                <li>Information on current salary scales and approved rates</li>
+                                <li>Guidance on allowable costs for different funders</li>
+                                <li>Review of draft budgets before submission</li>
+                                <li>Calculation of indirect costs and institutional overheads</li>
+                            </ul>
+                            <p>Contact the Grants Management Unit to schedule a budget consultation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How can I find potential research collaborators?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>KEMRI's Partnerships & Resource Mobilisation Unit can help match you with potential collaborators based on your research focus. We maintain relationships with numerous local and international research institutions, universities, and funding agencies. You can also browse our <a href="researchers.html">Researchers</a> page to see ongoing projects and research interests of KEMRI scientists.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What reporting is required for funded projects?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Reporting requirements vary by funder, but typically include:</p>
+                            <ul>
+                                <li>Technical/scientific progress reports (quarterly or semi-annual)</li>
+                                <li>Financial reports (quarterly or semi-annual)</li>
+                                <li>Annual reports</li>
+                                <li>Final technical and financial reports</li>
+                                <li>Publications and research outputs</li>
+                            </ul>
+                            <p>Once your project is funded, the Grant Management Department will provide a detailed reporting schedule specific to your grant. You can use our <a href="downloads/progress_report_template.docx">Progress Report Template</a> as a starting point for technical reporting.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How do I request a budget modification for my grant?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>To request a budget modification:</p>
+                            <ol>
+                                <li>Prepare a written justification explaining the requested changes and why they're necessary</li>
+                                <li>Prepare a comparison of the original and proposed revised budget</li>
+                                <li>Submit both documents to your assigned Grants Manager</li>
+                                <li>The Grant Management Department will review your request and advise on funder-specific requirements</li>
+                                <li>For significant modifications, funder approval may be required before implementation</li>
+                            </ol>
+                            <p>Note that some funders have specific restrictions on budget modifications, and approval processes can take 2-4 weeks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Need a Specific Resource -->
+        <section class="contact-resources">
             <div class="container">
                 <h2>Need a Specific Resource?</h2>
                 <p>If you can't find what you're looking for, please contact the Grant Management Department for assistance.</p>
@@ -388,11 +488,108 @@
                     <p><i class="fas fa-phone"></i> +254 (0) 20 2722541</p>
                     <p><i class="fas fa-envelope"></i> info@kemri.org</p>
                 </div>
+                <nav>
+                    <a href="privacy.html">Privacy Policy</a>
+                </nav>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2023 Kenya Medical Research Institute. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Script for FAQ functionality -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+          question.addEventListener('click', function() {
+            // Toggle aria-expanded attribute
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+            
+            // Toggle answer visibility
+            const answer = this.nextElementSibling;
+            if (expanded) {
+              answer.style.maxHeight = null;
+            } else {
+              answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+          });
+        });
+      });
+    </script>
+
+    <style>
+      /* FAQ Styles */
+      .faq-container {
+        margin-top: 2rem;
+      }
+      
+      .faq-item {
+        margin-bottom: 1rem;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      
+      .faq-question {
+        width: 100%;
+        background-color: #f9f9f9;
+        border: none;
+        padding: 1rem 1.5rem;
+        text-align: left;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: #333;
+        transition: background-color 0.3s;
+      }
+      
+      .faq-question:hover {
+        background-color: #f0f0f0;
+      }
+      
+      .faq-question i {
+        transition: transform 0.3s;
+      }
+      
+      .faq-question[aria-expanded="true"] i {
+        transform: rotate(180deg);
+      }
+      
+      .faq-answer {
+        padding: 0 1.5rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      
+      .faq-question[aria-expanded="true"] + .faq-answer {
+        padding: 1rem 1.5rem;
+      }
+      
+      .contact-resources {
+        background-color: #f5f5f5;
+        padding: 3rem 0;
+        text-align: center;
+        margin-top: 3rem;
+      }
+      
+      .contact-resources h2 {
+        margin-bottom: 1rem;
+      }
+      
+      .contact-resources p {
+        margin-bottom: 1.5rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
 </body>
 </html> 

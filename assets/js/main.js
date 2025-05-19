@@ -21,6 +21,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Smooth scrolling for anchor links
     initSmoothScroll();
+
+    // Initialize mobile menu
+    initMobileMenu();
+    
+    // Initialize scroll animations
+    initScrollAnimations();
+    
+    // Add back-to-top button
+    addBackToTopButton();
+    
+    // Initialize FAQ toggles if on resources page
+    if (document.querySelector('.faq-item')) {
+        initFaqToggles();
+    }
 });
 
 /**
@@ -589,4 +603,114 @@ function removeFormMessages(form) {
     if (existingMessages) {
         existingMessages.remove();
     }
+}
+
+/**
+ * Initialize mobile menu toggle
+ */
+function initMobileMenu() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('show');
+            menuToggle.classList.toggle('active');
+            
+            // Update aria-expanded state
+            const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+            menuToggle.setAttribute('aria-expanded', !expanded);
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (navMenu.classList.contains('show') && 
+                !navMenu.contains(event.target) && 
+                !menuToggle.contains(event.target)) {
+                navMenu.classList.remove('show');
+                menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+}
+
+/**
+ * Initialize scroll animations
+ */
+function initScrollAnimations() {
+    // Add fade-in animation to elements when they come into view
+    const animatedElements = document.querySelectorAll('.service-card, .quick-link-card');
+    
+    // Only run if IntersectionObserver is supported
+    if ('IntersectionObserver' in window && animatedElements.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        animatedElements.forEach(element => {
+            observer.observe(element);
+        });
+    }
+}
+
+/**
+ * Add back-to-top button
+ */
+function addBackToTopButton() {
+    // Create button element
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.className = 'back-to-top';
+    backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    backToTopBtn.setAttribute('aria-label', 'Back to top');
+    
+    // Add to document
+    document.body.appendChild(backToTopBtn);
+    
+    // Show button when scrolled down
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+    
+    // Scroll to top when clicked
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+/**
+ * Initialize FAQ toggles
+ */
+function initFaqToggles() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            // Toggle aria-expanded attribute
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+            
+            // Toggle answer visibility
+            const answer = this.nextElementSibling;
+            if (expanded) {
+                answer.style.maxHeight = null;
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        });
+    });
 } 

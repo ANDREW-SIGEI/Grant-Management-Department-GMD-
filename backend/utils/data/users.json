@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Admin User",
+    "email": "admin@kemri.org",
+    "role": "admin",
+    "password": "password123"
+  },
+  {
+    "name": "Regular User",
+    "email": "user@kemri.org",
+    "role": "user",
+    "password": "password123"
+  }
+] 
