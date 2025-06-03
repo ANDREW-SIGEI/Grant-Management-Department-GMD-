@@ -94,8 +94,13 @@ nav {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 0.25rem;
+  gap: 1rem;
   justify-content: center;
+  align-items: center;
+}
+
+.nav-menu li {
+  perspective: 1000px;
 }
 
 .nav-menu a {
@@ -106,14 +111,21 @@ nav {
   font-weight: 500;
   transition: all 0.3s ease;
   position: relative;
-  border-radius: 6px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
+  display: block;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+              0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
 .nav-menu a:hover,
 .nav-menu .active a {
   background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-1px);
+  transform: translateY(-3px) translateZ(10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2),
+              0 3px 6px rgba(255, 255, 255, 0.15);
 }
 
 .nav-menu a::before {
@@ -123,14 +135,38 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
   opacity: 0;
   transition: opacity 0.3s ease;
+  transform: translateZ(-1px);
 }
 
 .nav-menu a:hover::before,
 .nav-menu .active a::before {
+  opacity: 1;
+}
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 5%;
+  width: 90%;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  filter: blur(3px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-menu a:hover::after,
+.nav-menu .active a::after {
   opacity: 1;
 }
 

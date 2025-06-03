@@ -47,6 +47,25 @@
             <div class="container">
                 <h1>Resources</h1>
                 <p>Essential tools and documents for grant application and management</p>
+                
+                <!-- Add search functionality -->
+                <div class="resource-search">
+                    <div class="search-container">
+                        <input type="text" id="resourceSearch" placeholder="Search resources..." class="search-input">
+                        <button type="button" id="searchButton" class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="filter-container">
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="templates">Templates</option>
+                            <option value="policies">Policies</option>
+                            <option value="guidelines">Guidelines</option>
+                            <option value="sops">SOPs</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -72,7 +91,7 @@
                         <div class="resource-details">
                             <h3>Concept Note Template</h3>
                             <p>A structured template for developing initial research ideas for potential funding.</p>
-                            <a href="downloads/concept_note_template.docx" class="resource-link">
+                            <a href="content/concept_note_template.docx" class="resource-link">
                                 <i class="fas fa-download"></i> Download Template
                             </a>
                         </div>
@@ -85,7 +104,7 @@
                         <div class="resource-details">
                             <h3>Full Proposal Template</h3>
                             <p>Comprehensive template for developing complete research proposals.</p>
-                            <a href="downloads/full_proposal_template.docx" class="resource-link">
+                            <a href="content/full_proposal_template.docx" class="resource-link">
                                 <i class="fas fa-download"></i> Download Template
                             </a>
                         </div>
@@ -98,7 +117,7 @@
                         <div class="resource-details">
                             <h3>Budget Template</h3>
                             <p>Excel template with predefined categories and formulas for research budget preparation.</p>
-                            <a href="downloads/budget_template.xlsx" class="resource-link">
+                            <a href="content/budget_template.xlsx" class="resource-link">
                                 <i class="fas fa-download"></i> Download Template
                             </a>
                         </div>
@@ -111,7 +130,7 @@
                         <div class="resource-details">
                             <h3>Progress Report Template</h3>
                             <p>Standardized format for reporting research progress to funders.</p>
-                            <a href="downloads/progress_report_template.docx" class="resource-link">
+                            <a href="content/progress_report_template.docx" class="resource-link">
                                 <i class="fas fa-download"></i> Download Template
                             </a>
                         </div>
@@ -161,7 +180,7 @@
                         <div class="resource-details">
                             <h3>Financial Management Guidelines</h3>
                             <p>Guidelines for financial compliance and management of research funds.</p>
-                            <a href="downloads/financial_management_guidelines.pdf" class="resource-link">
+                            <a href="content/financial_management_guidelines.pdf" class="resource-link">
                                 <i class="fas fa-download"></i> Download Guidelines
                             </a>
                         </div>
@@ -174,7 +193,7 @@
                         <div class="resource-details">
                             <h3>Intellectual Property Policy</h3>
                             <p>KEMRI's policy on intellectual property rights in research.</p>
-                            <a href="downloads/intellectual_property_policy.pdf" class="resource-link">
+                            <a href="content/intellectual_property_policy.pdf" class="resource-link">
                                 <i class="fas fa-download"></i> Download Policy
                             </a>
                         </div>
@@ -198,7 +217,7 @@
                         <div class="resource-details">
                             <h3>Pre-Award SOP</h3>
                             <p>Procedures for proposal development, submission, and pre-award processes.</p>
-                            <a href="downloads/pre_award_sop.pdf" class="resource-link">
+                            <a href="content/pre_award_sop.pdf" class="resource-link">
                                 <i class="fas fa-download"></i> Download SOP
                             </a>
                         </div>
@@ -211,7 +230,7 @@
                         <div class="resource-details">
                             <h3>Post-Award SOP</h3>
                             <p>Procedures for grant implementation, monitoring, reporting, and closeout.</p>
-                            <a href="downloads/post_award_sop.pdf" class="resource-link">
+                            <a href="content/post_award_sop.pdf" class="resource-link">
                                 <i class="fas fa-download"></i> Download SOP
                             </a>
                         </div>
@@ -224,7 +243,7 @@
                         <div class="resource-details">
                             <h3>Compliance Review SOP</h3>
                             <p>Procedures for ensuring research and financial compliance.</p>
-                            <a href="downloads/compliance_review_sop.pdf" class="resource-link">
+                            <a href="content/compliance_review_sop.pdf" class="resource-link">
                                 <i class="fas fa-download"></i> Download SOP
                             </a>
                         </div>
@@ -237,7 +256,7 @@
                         <div class="resource-details">
                             <h3>Partnership Development SOP</h3>
                             <p>Procedures for establishing and managing research partnerships.</p>
-                            <a href="downloads/partnership_development_sop.pdf" class="resource-link">
+                            <a href="content/partnership_development_sop.pdf" class="resource-link">
                                 <i class="fas fa-download"></i> Download SOP
                             </a>
                         </div>
@@ -261,7 +280,7 @@
                         <div class="resource-details">
                             <h3>Grant Writing Guide</h3>
                             <p>Comprehensive guide with tips and best practices for writing competitive grant proposals.</p>
-                            <a href="downloads/grant_writing_guide.pdf" class="resource-link">
+                            <a href="content/grant_writing_guide.pdf" class="resource-link">
                                 <i class="fas fa-download"></i> Download Guide
                             </a>
                         </div>
@@ -274,7 +293,7 @@
                         <div class="resource-details">
                             <h3>Budget Calculator</h3>
                             <p>Interactive tool for calculating research budgets with KEMRI's cost structures.</p>
-                            <a href="downloads/budget_calculator.xlsx" class="resource-link">
+                            <a href="content/budget_calculator.xlsx" class="resource-link">
                                 <i class="fas fa-download"></i> Download Calculator
                             </a>
                         </div>
@@ -287,7 +306,7 @@
                         <div class="resource-details">
                             <h3>Funder Requirements Checklist</h3>
                             <p>Checklist of common requirements from major funding agencies.</p>
-                            <a href="downloads/funder_requirements_checklist.pdf" class="resource-link">
+                            <a href="content/funder_requirements_checklist.pdf" class="resource-link">
                                 <i class="fas fa-download"></i> Download Checklist
                             </a>
                         </div>
@@ -300,7 +319,7 @@
                         <div class="resource-details">
                             <h3>Reporting Timeline Template</h3>
                             <p>Template for tracking reporting deadlines and requirements for multiple grants.</p>
-                            <a href="downloads/reporting_timeline_template.pdf" class="resource-link">
+                            <a href="content/reporting_timeline_template.pdf" class="resource-link">
                                 <i class="fas fa-download"></i> Download Template
                             </a>
                         </div>
@@ -337,7 +356,7 @@
                         <div class="resource-details">
                             <h3>KEMRI Research Guide</h3>
                             <p>Overview of KEMRI's research programs, facilities, and policies for potential collaborators and researchers.</p>
-                            <a href="downloads/kemri_research_guide.pdf" class="resource-link">
+                            <a href="content/kemri_research_guide.pdf" class="resource-link">
                                 <i class="fas fa-download"></i> Download Guide
                             </a>
                         </div>
@@ -486,7 +505,7 @@
                     <h3>Contact Information</h3>
                     <p><i class="fas fa-map-marker-alt"></i> KEMRI Headquarters, Mbagathi Road, Nairobi, Kenya</p>
                     <p><i class="fas fa-phone"></i> +254 (0) 20 2722541</p>
-                    <p><i class="fas fa-envelope"></i> info@kemri.org</p>
+                    <p><i class="fas fa-envelope"></i> Dsppgm@kemri.go.ke</p>
                 </div>
                 <nav>
                     <a href="privacy.html">Privacy Policy</a>

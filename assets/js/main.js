@@ -149,6 +149,12 @@ function initFormHandlers() {
     const newsletterForm = document.querySelector('.newsletter-form form');
     
     if (contactForm) {
+        // Load departments dynamically
+        loadDepartments();
+        
+        // Initialize CSRF token
+        initCSRF();
+        
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault();
             
@@ -179,26 +185,47 @@ function initFormHandlers() {
                     formObject[key] = value;
                 });
                 
-                // Simulate API call (in production, replace with actual API endpoint)
-                // For demonstration purposes only
-                setTimeout(() => {
+                // Submit to actual API endpoint
+                fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').content
+                    },
+                    body: JSON.stringify(formObject)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
                     showFormSuccess(contactForm, 'Thank you for your message. We will get back to you within 2 business days.');
                     contactForm.reset();
-                }, 1000);
-                
-                // Show loading indicator
-                const submitBtn = contactForm.querySelector('[type="submit"]');
-                if (submitBtn) {
-                    const originalText = submitBtn.innerHTML;
-                    submitBtn.disabled = true;
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
                     
-                    // Reset button after simulated submission
-                    setTimeout(() => {
-                        submitBtn.disabled = false;
-                        submitBtn.innerHTML = originalText;
-                    }, 1000);
-                }
+                    // Reset all inputs to default state
+                    const inputs = contactForm.querySelectorAll('input, textarea, select');
+                    inputs.forEach(input => {
+                        input.classList.remove('is-valid', 'is-invalid');
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showFormError(contactForm, 'There was an error submitting the form. Please try again.');
+                })
+                .finally(() => {
+                    // Reset button state
+                    const submitBtn = contactForm.querySelector('[type="submit"]');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                });
+                
+                // Show loading state
+                const submitBtn = contactForm.querySelector('[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             } else {
                 showFormError(contactForm, 'Please fix the errors in the form before submitting.');
             }
@@ -256,6 +283,60 @@ function initFormHandlers() {
             }
         });
     }
+}
+
+/**
+ * Load departments from the backend
+ */
+function loadDepartments() {
+    const departmentSelect = document.getElementById('department');
+    if (!departmentSelect) return;
+    
+    // Show loading state
+    departmentSelect.disabled = true;
+    const loadingOption = document.createElement('option');
+    loadingOption.text = 'Loading departments...';
+    departmentSelect.add(loadingOption);
+    
+    // Fetch departments from API
+    fetch('/api/departments')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Clear loading state
+            departmentSelect.innerHTML = '<option value="">Select Department</option>';
+            
+            // Add departments to select
+            data.forEach(dept => {
+                const option = document.createElement('option');
+                option.value = dept.id;
+                option.text = dept.name;
+                departmentSelect.add(option);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading departments:', error);
+            departmentSelect.innerHTML = '<option value="">Error loading departments</option>';
+        })
+        .finally(() => {
+            departmentSelect.disabled = false;
+        });
+}
+
+/**
+ * Initialize CSRF protection
+ */
+function initCSRF() {
+    // Generate a random token
+    const token = Math.random().toString(36).substring(2) + Date.now().toString(36);
+    
+    // Set the token in meta tag and form input
+    document.getElementById('csrf-token').content = token;
+    document.getElementById('csrf-input').value = token;
 }
 
 /**
