@@ -91,9 +91,22 @@
                         <div class="resource-details">
                             <h3>Concept Note Template</h3>
                             <p>A structured template for developing initial research ideas for potential funding.</p>
-                            <a href="content/concept_note_template.docx" class="resource-link">
-                                <i class="fas fa-download"></i> Download Template
-                            </a>
+                            <button class="view-content-btn" onclick="toggleContent('concept-note-content')">
+                                <i class="fas fa-eye"></i> View Content
+                            </button>
+                            <div id="concept-note-content" class="template-content" style="display: none;">
+                                <h4>Concept Note Structure</h4>
+                                <ol>
+                                    <li>Project Title</li>
+                                    <li>Principal Investigator Information</li>
+                                    <li>Research Problem (250 words)</li>
+                                    <li>Research Objectives</li>
+                                    <li>Methodology Overview (500 words)</li>
+                                    <li>Expected Outcomes</li>
+                                    <li>Preliminary Budget</li>
+                                    <li>Timeline</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                     
@@ -104,9 +117,29 @@
                         <div class="resource-details">
                             <h3>Full Proposal Template</h3>
                             <p>Comprehensive template for developing complete research proposals.</p>
-                            <a href="content/full_proposal_template.docx" class="resource-link">
-                                <i class="fas fa-download"></i> Download Template
-                            </a>
+                            <button class="view-content-btn" onclick="toggleContent('full-proposal-content')">
+                                <i class="fas fa-eye"></i> View Content
+                            </button>
+                            <div id="full-proposal-content" class="template-content" style="display: none;">
+                                <h4>Full Proposal Sections</h4>
+                                <ol>
+                                    <li>Executive Summary</li>
+                                    <li>Background & Literature Review</li>
+                                    <li>Research Questions & Objectives</li>
+                                    <li>Methodology
+                                        <ul>
+                                            <li>Study Design</li>
+                                            <li>Data Collection</li>
+                                            <li>Analysis Plan</li>
+                                        </ul>
+                                    </li>
+                                    <li>Expected Impact</li>
+                                    <li>Research Team</li>
+                                    <li>Detailed Budget</li>
+                                    <li>Timeline & Milestones</li>
+                                    <li>References</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                     
@@ -117,9 +150,30 @@
                         <div class="resource-details">
                             <h3>Budget Template</h3>
                             <p>Excel template with predefined categories and formulas for research budget preparation.</p>
-                            <a href="content/budget_template.xlsx" class="resource-link">
-                                <i class="fas fa-download"></i> Download Template
-                            </a>
+                            <button class="view-content-btn" onclick="toggleContent('budget-content')">
+                                <i class="fas fa-eye"></i> View Content
+                            </button>
+                            <div id="budget-content" class="template-content" style="display: none;">
+                                <h4>Budget Categories</h4>
+                                <ul>
+                                    <li>Personnel Costs
+                                        <ul>
+                                            <li>Salaries</li>
+                                            <li>Benefits</li>
+                                            <li>Consultants</li>
+                                        </ul>
+                                    </li>
+                                    <li>Direct Research Costs
+                                        <ul>
+                                            <li>Equipment</li>
+                                            <li>Supplies</li>
+                                            <li>Travel</li>
+                                        </ul>
+                                    </li>
+                                    <li>Indirect Costs</li>
+                                    <li>Other Direct Costs</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     
@@ -130,9 +184,26 @@
                         <div class="resource-details">
                             <h3>Progress Report Template</h3>
                             <p>Standardized format for reporting research progress to funders.</p>
-                            <a href="content/progress_report_template.docx" class="resource-link">
-                                <i class="fas fa-download"></i> Download Template
-                            </a>
+                            <button class="view-content-btn" onclick="toggleContent('progress-report-content')">
+                                <i class="fas fa-eye"></i> View Content
+                            </button>
+                            <div id="progress-report-content" class="template-content" style="display: none;">
+                                <h4>Progress Report Components</h4>
+                                <ol>
+                                    <li>Executive Summary</li>
+                                    <li>Project Goals & Objectives</li>
+                                    <li>Activities Completed
+                                        <ul>
+                                            <li>Research Progress</li>
+                                            <li>Key Findings</li>
+                                            <li>Challenges & Solutions</li>
+                                        </ul>
+                                    </li>
+                                    <li>Budget Utilization</li>
+                                    <li>Next Steps</li>
+                                    <li>Supporting Documents</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -180,9 +251,30 @@
                         <div class="resource-details">
                             <h3>Financial Management Guidelines</h3>
                             <p>Guidelines for financial compliance and management of research funds.</p>
-                            <a href="content/financial_management_guidelines.pdf" class="resource-link">
-                                <i class="fas fa-download"></i> Download Guidelines
-                            </a>
+                            <button class="view-content-btn" onclick="toggleContent('financial-guidelines-content')">
+                                <i class="fas fa-eye"></i> View Content
+                            </button>
+                            <div id="financial-guidelines-content" class="template-content" style="display: none;">
+                                <h4>Financial Management Guidelines</h4>
+                                <ol>
+                                    <li>Financial Policies
+                                        <ul>
+                                            <li>Budget Management</li>
+                                            <li>Expense Categories</li>
+                                            <li>Financial Reporting</li>
+                                        </ul>
+                                    </li>
+                                    <li>Compliance Requirements
+                                        <ul>
+                                            <li>Documentation</li>
+                                            <li>Audit Procedures</li>
+                                            <li>Record Keeping</li>
+                                        </ul>
+                                    </li>
+                                    <li>Financial Controls</li>
+                                    <li>Reporting Templates</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                     
@@ -193,9 +285,24 @@
                         <div class="resource-details">
                             <h3>Intellectual Property Policy</h3>
                             <p>KEMRI's policy on intellectual property rights in research.</p>
-                            <a href="content/intellectual_property_policy.pdf" class="resource-link">
-                                <i class="fas fa-download"></i> Download Policy
-                            </a>
+                            <button class="view-content-btn" onclick="toggleContent('ip-policy-content')">
+                                <i class="fas fa-eye"></i> View Content
+                            </button>
+                            <div id="ip-policy-content" class="template-content" style="display: none;">
+                                <h4>IP Policy Components</h4>
+                                <ol>
+                                    <li>IP Rights & Ownership
+                                        <ul>
+                                            <li>Research Outputs</li>
+                                            <li>Collaborative Projects</li>
+                                            <li>Staff Innovations</li>
+                                        </ul>
+                                    </li>
+                                    <li>Protection Procedures</li>
+                                    <li>Commercialization</li>
+                                    <li>Revenue Sharing</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -217,9 +324,25 @@
                         <div class="resource-details">
                             <h3>Pre-Award SOP</h3>
                             <p>Procedures for proposal development, submission, and pre-award processes.</p>
-                            <a href="content/pre_award_sop.pdf" class="resource-link">
-                                <i class="fas fa-download"></i> Download SOP
-                            </a>
+                            <button class="view-content-btn" onclick="toggleContent('pre-award-content')">
+                                <i class="fas fa-eye"></i> View Content
+                            </button>
+                            <div id="pre-award-content" class="template-content" style="display: none;">
+                                <h4>Pre-Award Procedures</h4>
+                                <ol>
+                                    <li>Opportunity Identification</li>
+                                    <li>Internal Review Process</li>
+                                    <li>Proposal Development
+                                        <ul>
+                                            <li>Technical Components</li>
+                                            <li>Budget Development</li>
+                                            <li>Administrative Requirements</li>
+                                        </ul>
+                                    </li>
+                                    <li>Submission Process</li>
+                                    <li>Pre-Award Negotiations</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                     
@@ -230,9 +353,24 @@
                         <div class="resource-details">
                             <h3>Post-Award SOP</h3>
                             <p>Procedures for grant implementation, monitoring, reporting, and closeout.</p>
-                            <a href="content/post_award_sop.pdf" class="resource-link">
-                                <i class="fas fa-download"></i> Download SOP
-                            </a>
+                            <button class="view-content-btn" onclick="toggleContent('post-award-content')">
+                                <i class="fas fa-eye"></i> View Content
+                            </button>
+                            <div id="post-award-content" class="template-content" style="display: none;">
+                                <h4>Post-Award Management</h4>
+                                <ol>
+                                    <li>Project Setup</li>
+                                    <li>Implementation Guidelines</li>
+                                    <li>Monitoring & Reporting
+                                        <ul>
+                                            <li>Technical Reports</li>
+                                            <li>Financial Reports</li>
+                                            <li>Progress Updates</li>
+                                        </ul>
+                                    </li>
+                                    <li>Project Closeout</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                     
@@ -243,9 +381,24 @@
                         <div class="resource-details">
                             <h3>Compliance Review SOP</h3>
                             <p>Procedures for ensuring research and financial compliance.</p>
-                            <a href="content/compliance_review_sop.pdf" class="resource-link">
-                                <i class="fas fa-download"></i> Download SOP
-                            </a>
+                            <button class="view-content-btn" onclick="toggleContent('compliance-content')">
+                                <i class="fas fa-eye"></i> View Content
+                            </button>
+                            <div id="compliance-content" class="template-content" style="display: none;">
+                                <h4>Compliance Review Process</h4>
+                                <ol>
+                                    <li>Ethics Compliance</li>
+                                    <li>Financial Compliance</li>
+                                    <li>Research Standards
+                                        <ul>
+                                            <li>Data Management</li>
+                                            <li>Safety Protocols</li>
+                                            <li>Quality Control</li>
+                                        </ul>
+                                    </li>
+                                    <li>Reporting Requirements</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                     
@@ -256,9 +409,24 @@
                         <div class="resource-details">
                             <h3>Partnership Development SOP</h3>
                             <p>Procedures for establishing and managing research partnerships.</p>
-                            <a href="content/partnership_development_sop.pdf" class="resource-link">
-                                <i class="fas fa-download"></i> Download SOP
-                            </a>
+                            <button class="view-content-btn" onclick="toggleContent('partnership-content')">
+                                <i class="fas fa-eye"></i> View Content
+                            </button>
+                            <div id="partnership-content" class="template-content" style="display: none;">
+                                <h4>Partnership Development Process</h4>
+                                <ol>
+                                    <li>Partner Identification</li>
+                                    <li>Due Diligence</li>
+                                    <li>Agreement Development
+                                        <ul>
+                                            <li>MOUs</li>
+                                            <li>Contracts</li>
+                                            <li>Work Plans</li>
+                                        </ul>
+                                    </li>
+                                    <li>Partnership Management</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -280,9 +448,30 @@
                         <div class="resource-details">
                             <h3>Grant Writing Guide</h3>
                             <p>Comprehensive guide with tips and best practices for writing competitive grant proposals.</p>
-                            <a href="content/grant_writing_guide.pdf" class="resource-link">
-                                <i class="fas fa-download"></i> Download Guide
-                            </a>
+                            <button class="view-content-btn" onclick="toggleContent('grant-writing-content')">
+                                <i class="fas fa-eye"></i> View Content
+                            </button>
+                            <div id="grant-writing-content" class="template-content" style="display: none;">
+                                <h4>Grant Writing Guide Contents</h4>
+                                <ol>
+                                    <li>Proposal Planning
+                                        <ul>
+                                            <li>Understanding Requirements</li>
+                                            <li>Timeline Development</li>
+                                            <li>Team Assembly</li>
+                                        </ul>
+                                    </li>
+                                    <li>Writing Tips
+                                        <ul>
+                                            <li>Clear Objectives</li>
+                                            <li>Impact Statements</li>
+                                            <li>Budget Justification</li>
+                                        </ul>
+                                    </li>
+                                    <li>Common Pitfalls</li>
+                                    <li>Review Process</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                     
@@ -293,9 +482,19 @@
                         <div class="resource-details">
                             <h3>Budget Calculator</h3>
                             <p>Interactive tool for calculating research budgets with KEMRI's cost structures.</p>
-                            <a href="content/budget_calculator.xlsx" class="resource-link">
-                                <i class="fas fa-download"></i> Download Calculator
-                            </a>
+                            <button class="view-content-btn" onclick="toggleContent('calculator-content')">
+                                <i class="fas fa-eye"></i> View Content
+                            </button>
+                            <div id="calculator-content" class="template-content" style="display: none;">
+                                <h4>Budget Calculator Components</h4>
+                                <ul>
+                                    <li>Personnel Costs Calculator</li>
+                                    <li>Equipment Cost Estimator</li>
+                                    <li>Travel Expense Calculator</li>
+                                    <li>Indirect Cost Calculator</li>
+                                    <li>Budget Summary Generator</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     
@@ -306,9 +505,20 @@
                         <div class="resource-details">
                             <h3>Funder Requirements Checklist</h3>
                             <p>Checklist of common requirements from major funding agencies.</p>
-                            <a href="content/funder_requirements_checklist.pdf" class="resource-link">
-                                <i class="fas fa-download"></i> Download Checklist
-                            </a>
+                            <button class="view-content-btn" onclick="toggleContent('checklist-content')">
+                                <i class="fas fa-eye"></i> View Content
+                            </button>
+                            <div id="checklist-content" class="template-content" style="display: none;">
+                                <h4>Funder Requirements</h4>
+                                <ul>
+                                    <li>Eligibility Criteria</li>
+                                    <li>Required Documents</li>
+                                    <li>Format Requirements</li>
+                                    <li>Budget Guidelines</li>
+                                    <li>Submission Process</li>
+                                    <li>Review Timeline</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     
@@ -319,9 +529,19 @@
                         <div class="resource-details">
                             <h3>Reporting Timeline Template</h3>
                             <p>Template for tracking reporting deadlines and requirements for multiple grants.</p>
-                            <a href="content/reporting_timeline_template.pdf" class="resource-link">
-                                <i class="fas fa-download"></i> Download Template
-                            </a>
+                            <button class="view-content-btn" onclick="toggleContent('timeline-content')">
+                                <i class="fas fa-eye"></i> View Content
+                            </button>
+                            <div id="timeline-content" class="template-content" style="display: none;">
+                                <h4>Timeline Components</h4>
+                                <ul>
+                                    <li>Project Milestones</li>
+                                    <li>Technical Report Deadlines</li>
+                                    <li>Financial Report Due Dates</li>
+                                    <li>Progress Updates Schedule</li>
+                                    <li>Final Report Timeline</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -356,9 +576,24 @@
                         <div class="resource-details">
                             <h3>KEMRI Research Guide</h3>
                             <p>Overview of KEMRI's research programs, facilities, and policies for potential collaborators and researchers.</p>
-                            <a href="content/kemri_research_guide.pdf" class="resource-link">
-                                <i class="fas fa-download"></i> Download Guide
-                            </a>
+                            <button class="view-content-btn" onclick="toggleContent('research-guide-content')">
+                                <i class="fas fa-eye"></i> View Content
+                            </button>
+                            <div id="research-guide-content" class="template-content" style="display: none;">
+                                <h4>Research Guide Contents</h4>
+                                <ol>
+                                    <li>Research Programs
+                                        <ul>
+                                            <li>Current Focus Areas</li>
+                                            <li>Research Priorities</li>
+                                            <li>Ongoing Projects</li>
+                                        </ul>
+                                    </li>
+                                    <li>Facilities & Resources</li>
+                                    <li>Collaboration Opportunities</li>
+                                    <li>Research Policies</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                     
@@ -390,7 +625,7 @@
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>The first step is to develop a concept note that outlines your research idea, objectives, methodology, and potential impact. You can use our <a href="downloads/concept_note_template.docx">Concept Note Template</a> to get started. Once your concept note is ready, submit it to the Grant Management Department for initial review and feedback before developing a full proposal.</p>
+                            <p>The first step is to develop a concept note that outlines your research idea, objectives, methodology, and potential impact. You can use our Concept Note Template (available in the Forms & Templates section above) to get started. Once your concept note is ready, submit it to the Grant Management Department for initial review and feedback before developing a full proposal.</p>
                         </div>
                     </div>
                     
@@ -446,7 +681,7 @@
                                 <li>Final technical and financial reports</li>
                                 <li>Publications and research outputs</li>
                             </ul>
-                            <p>Once your project is funded, the Grant Management Department will provide a detailed reporting schedule specific to your grant. You can use our <a href="downloads/progress_report_template.docx">Progress Report Template</a> as a starting point for technical reporting.</p>
+                            <p>Once your project is funded, the Grant Management Department will provide a detailed reporting schedule specific to your grant. You can use our Progress Report Template (available in the Forms & Templates section above) as a starting point for technical reporting.</p>
                         </div>
                     </div>
                     

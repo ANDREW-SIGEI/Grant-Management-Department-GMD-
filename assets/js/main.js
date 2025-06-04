@@ -149,9 +149,6 @@ function initFormHandlers() {
     const newsletterForm = document.querySelector('.newsletter-form form');
     
     if (contactForm) {
-        // Load departments dynamically
-        loadDepartments();
-        
         // Initialize CSRF token
         initCSRF();
         
@@ -283,48 +280,6 @@ function initFormHandlers() {
             }
         });
     }
-}
-
-/**
- * Load departments from the backend
- */
-function loadDepartments() {
-    const departmentSelect = document.getElementById('department');
-    if (!departmentSelect) return;
-    
-    // Show loading state
-    departmentSelect.disabled = true;
-    const loadingOption = document.createElement('option');
-    loadingOption.text = 'Loading departments...';
-    departmentSelect.add(loadingOption);
-    
-    // Fetch departments from API
-    fetch('/api/departments')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Clear loading state
-            departmentSelect.innerHTML = '<option value="">Select Department</option>';
-            
-            // Add departments to select
-            data.forEach(dept => {
-                const option = document.createElement('option');
-                option.value = dept.id;
-                option.text = dept.name;
-                departmentSelect.add(option);
-            });
-        })
-        .catch(error => {
-            console.error('Error loading departments:', error);
-            departmentSelect.innerHTML = '<option value="">Error loading departments</option>';
-        })
-        .finally(() => {
-            departmentSelect.disabled = false;
-        });
 }
 
 /**

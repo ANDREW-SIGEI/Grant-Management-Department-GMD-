@@ -22,30 +22,52 @@ body {
 
 /* Header & Navigation */
 header {
-  background: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
   padding: 0;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
   position: sticky;
   top: 0;
   z-index: 1000;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,0.2),
+    0 0 0 1px rgba(255,255,255,0.1) inset;
+  border-radius: 0 0 15px 15px;
+  margin: 0 20px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0.5rem 2rem;
+  position: relative;
+  transform-style: preserve-3d;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  padding: 0.75rem 0;
+  padding: 0.75rem;
   text-decoration: none;
-  background: transparent;
-  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
   margin: 0.5rem 0;
-  padding: 0.5rem 1rem;
+  transform-style: preserve-3d;
+  transform: translateZ(20px);
+  box-shadow: 
+    0 5px 15px rgba(0,0,0,0.2),
+    0 0 0 1px rgba(255,255,255,0.1) inset;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: translateZ(30px);
+  box-shadow: 
+    0 8px 20px rgba(0,0,0,0.3),
+    0 0 0 1px rgba(255,255,255,0.2) inset;
 }
 
 .logo {
@@ -54,8 +76,11 @@ header {
   object-fit: contain;
   filter: brightness(0) invert(1);
   transition: transform 0.3s ease;
-  display: block;
-  max-width: 100%;
+  transform: translateZ(10px);
+  background: rgba(255,255,255,0.9);
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .logo:hover {
@@ -97,6 +122,8 @@ nav {
   gap: 1rem;
   justify-content: center;
   align-items: center;
+  transform-style: preserve-3d;
+  transform: translateZ(15px);
 }
 
 .nav-menu li {
@@ -112,20 +139,22 @@ nav {
   transition: all 0.3s ease;
   position: relative;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255,255,255,0.1);
   display: block;
   transform-style: preserve-3d;
   transform: translateZ(0);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
-              0 2px 4px rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 4px 8px rgba(0,0,0,0.1),
+    0 0 0 1px rgba(255,255,255,0.1) inset;
 }
 
 .nav-menu a:hover,
 .nav-menu .active a {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-3px) translateZ(10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2),
-              0 3px 6px rgba(255, 255, 255, 0.15);
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-3px) translateZ(20px);
+  box-shadow: 
+    0 8px 16px rgba(0,0,0,0.2),
+    0 0 0 1px rgba(255,255,255,0.2) inset;
 }
 
 .nav-menu a::before {
@@ -483,4 +512,179 @@ footer {
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   text-decoration: none;
   font-size: 1.1em;
+}
+
+/* Search bar styles */
+.search-container {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(25px);
+  margin: 0.5rem 0;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
+  width: 200px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 4px 8px rgba(0,0,0,0.1),
+    0 0 0 1px rgba(255,255,255,0.1) inset;
+}
+
+.search-input:focus {
+  outline: none;
+  background: rgba(255,255,255,0.2);
+  width: 250px;
+  transform: translateZ(30px);
+  box-shadow: 
+    0 8px 16px rgba(0,0,0,0.2),
+    0 0 0 1px rgba(255,255,255,0.2) inset;
+}
+
+.search-input::placeholder {
+  color: rgba(255,255,255,0.7);
+} 
+
+/* Template Content Styles */
+.template-content {
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
+    margin-top: 16px;
+    padding: 0 16px;
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+}
+
+.template-content.active {
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.view-content-btn {
+    background-color: #2c5282;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    transition: background-color 0.2s ease;
+}
+
+.view-content-btn:hover {
+    background-color: #1a365d;
+}
+
+.view-content-btn.active {
+    background-color: #1a365d;
+}
+
+.template-content h4 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #2d3748;
+    font-size: 1.1em;
+}
+
+.template-content ul,
+.template-content ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.template-content li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.template-content ul ul,
+.template-content ol ul {
+    margin-top: 8px;
+}
+
+/* FAQ Styles */
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 16px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #e2e8f0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.faq-question:hover {
+    background-color: #f7fafc;
+}
+
+.faq-answer {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    padding: 0 16px;
+    background-color: #f8fafc;
+}
+
+.faq-question[aria-expanded="true"] + .faq-answer {
+    padding: 16px;
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
+}
+
+.faq-question[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}
+
+/* Resource Card Enhancements */
+.resource-card {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resource-icon {
+    color: #2c5282;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .template-content {
+        margin-top: 12px;
+        padding: 0 12px;
+    }
+
+    .template-content.active {
+        padding: 12px;
+    }
+
+    .view-content-btn {
+        width: 100%;
+        justify-content: center;
+    }
 } 
