@@ -7,6 +7,18 @@
     <title>Organizational Structure - KEMRI Grant Management Department</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="assets/js/main.js" defer></script>
+    <!-- Add Mermaid JS -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'default',
+                securityLevel: 'loose',
+                logLevel: 'error'
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -51,7 +63,295 @@
                 <h2>Departmental Hierarchy</h2>
                 <div class="org-chart-container" style="margin: 2rem 0; text-align: center;">
                     <h3>KEMRI Grant Management Department Organizational Chart</h3>
-                    <img src="assets/images/Screenshot from 2025-06-03 08-30-22.png" alt="KEMRI Grant Management Department Organizational Chart" style="max-width:100%; height:auto; margin: 2rem auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background: white; padding: 20px; border-radius: 8px;">
+                    <div class="org-chart-3d" style="max-width:100%; margin: 2rem auto; padding: 20px; overflow-x: auto;">
+                        <style>
+                            .org-chart-3d {
+                                font-family: Arial, sans-serif;
+                                background-color: #f9f9f9;
+                                padding: 30px;
+                                border-radius: 10px;
+                                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+                            }
+                            .org-tree {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                            .org-level {
+                                display: flex;
+                                justify-content: center;
+                                width: 100%;
+                                position: relative;
+                                margin-bottom: 50px; /* More space between levels */
+                            }
+                            .org-box {
+                                padding: 15px;
+                                margin: 0 15px;
+                                border-radius: 8px;
+                                text-align: center;
+                                position: relative;
+                                box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+                                transition: all 0.3s;
+                                min-width: 180px;
+                                color: white;
+                                font-weight: bold;
+                                transform: perspective(1000px) rotateX(10deg);
+                                border: 2px solid rgba(255,255,255,0.2);
+                                z-index: 10;
+                            }
+                            .org-box:hover {
+                                transform: perspective(1000px) rotateX(0) translateY(-5px);
+                                box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+                                z-index: 100;
+                            }
+                            .org-box::before {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%);
+                                border-radius: 6px;
+                                pointer-events: none;
+                            }
+                            .org-box.board {
+                                background-color: #4a90e2;
+                                width: 300px;
+                            }
+                            .org-box.ceo {
+                                background-color: #89bfef;
+                                width: 300px;
+                            }
+                            .org-box.director {
+                                background-color: #ffd966;
+                                color: black;
+                                width: 550px;
+                                background-image: url('assets/images/texture-bg.png');
+                                background-repeat: repeat;
+                                background-blend-mode: overlay;
+                            }
+                            .org-box.unit {
+                                background-color: #9c59b6;
+                                width: 220px;
+                            }
+                            .org-box.function {
+                                background-color: #82d198;
+                                color: black;
+                                min-width: 120px;
+                                border: 1px solid #4caf50;
+                            }
+                            
+                            /* Connector lines */
+                            .connector-vertical {
+                                width: 4px;
+                                height: 40px;
+                                background-color: #333;
+                                margin: 0 auto;
+                                position: relative;
+                            }
+                            .connector-arrow {
+                                position: absolute;
+                                bottom: -10px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                width: 20px;
+                                height: 20px;
+                                background-color: white;
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                z-index: 20;
+                                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                            }
+                            .connector-arrow::after {
+                                content: '▼';
+                                color: #333;
+                                font-size: 14px;
+                            }
+                            
+                            /* Branch structure */
+                            .branch-container {
+                                position: relative;
+                                width: 90%;
+                                margin: 0 auto;
+                            }
+                            .branch-line {
+                                position: absolute;
+                                top: -40px;
+                                left: 5%;
+                                right: 5%;
+                                height: 4px;
+                                background-color: #333;
+                            }
+                            .branch-vertical {
+                                position: absolute;
+                                width: 4px;
+                                height: 40px;
+                                background-color: #333;
+                            }
+                            .branch-left {
+                                left: 5%;
+                                top: -40px;
+                            }
+                            .branch-middle {
+                                left: 50%;
+                                transform: translateX(-50%);
+                                top: -40px;
+                            }
+                            .branch-right {
+                                right: 5%;
+                                top: -40px;
+                            }
+                            
+                            /* Function group connector */
+                            .function-group {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                margin: 0 15px;
+                                position: relative;
+                            }
+                            .function-connector {
+                                width: 4px;
+                                height: 30px;
+                                background-color: #333;
+                                margin: 10px 0;
+                                position: relative;
+                            }
+                            .function-connector-horizontal {
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                right: 0;
+                                height: 4px;
+                                background-color: #333;
+                            }
+                            
+                            /* Title */
+                            .section-title {
+                                font-size: 28px;
+                                font-weight: bold;
+                                color: #333;
+                                text-align: center;
+                                margin-bottom: 40px;
+                                position: relative;
+                                text-transform: uppercase;
+                                text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+                            }
+                            .section-title::after {
+                                content: '';
+                                position: absolute;
+                                bottom: -10px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                width: 100px;
+                                height: 3px;
+                                background-color: #4a90e2;
+                            }
+                        </style>
+                        
+                        <h2 class="section-title">Our Organizational Structure</h2>
+                        
+                        <div class="org-tree">
+                            <!-- Level 1: Board -->
+                            <div class="org-level">
+                                <div class="org-box board">THE BOARD OF DIRECTORS, KEMRI</div>
+                            </div>
+                            
+                            <!-- Connector Board to CEO -->
+                            <div class="connector-vertical">
+                                <div class="connector-arrow"></div>
+                            </div>
+                            
+                            <!-- Level 2: CEO -->
+                            <div class="org-level">
+                                <div class="org-box ceo">DIRECTOR GENERAL & CEO</div>
+                            </div>
+                            
+                            <!-- Connector CEO to Director -->
+                            <div class="connector-vertical">
+                                <div class="connector-arrow"></div>
+                            </div>
+                            
+                            <!-- Level 3: Director -->
+                            <div class="org-level">
+                                <div class="org-box director">DIRECTOR SCIENTIFIC PROGRAMMES, PARTNERSHIPS AND GRANTS MANAGEMENT</div>
+                            </div>
+                            
+                            <!-- Connector Director to Units with branches -->
+                            <div class="connector-vertical" style="height: 20px;"></div>
+                            
+                            <!-- Branch structure for units -->
+                            <div class="branch-container">
+                                <div class="branch-line"></div>
+                                <div class="branch-vertical branch-left">
+                                    <div class="connector-arrow"></div>
+                                </div>
+                                <div class="branch-vertical branch-middle">
+                                    <div class="connector-arrow"></div>
+                                </div>
+                                <div class="branch-vertical branch-right">
+                                    <div class="connector-arrow"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Level 4: Units -->
+                            <div class="org-level">
+                                <div class="org-box unit">Pre-Award, Contracts & Compliance Unit</div>
+                                <div class="org-box unit">Deputy Director Grants Management</div>
+                                <div class="org-box unit">Partnerships & Resource Mobilisation</div>
+                            </div>
+                            
+                            <!-- Level 5: Functions -->
+                            <div class="org-level" style="margin-top: 10px; align-items: flex-start;">
+                                <!-- Left Column Functions -->
+                                <div class="function-group" style="width: 33%;">
+                                    <div class="connector-vertical" style="height: 30px;">
+                                        <div class="connector-arrow"></div>
+                                    </div>
+                                    <div class="org-box function">Pre-Award</div>
+                                    <div class="function-connector"></div>
+                                    <div class="org-box function">Compliance</div>
+                                    <div class="function-connector"></div>
+                                    <div class="org-box function">Monitoring & Evaluation</div>
+                                </div>
+                                
+                                <!-- Middle Column Functions - Two rows with horizontal connectors -->
+                                <div class="function-group" style="width: 34%;">
+                                    <div class="connector-vertical" style="height: 30px;">
+                                        <div class="connector-arrow"></div>
+                                    </div>
+                                    <!-- First row -->
+                                    <div style="display: flex; width: 100%; position: relative; margin-bottom: 20px;">
+                                        <div style="position: absolute; top: 50%; left: 0; right: 0; height: 4px; background-color: #333;"></div>
+                                        <div class="org-box function" style="flex: 1; margin: 0 10px; position: relative; z-index: 5;">Human Resource</div>
+                                        <div class="org-box function" style="flex: 1; margin: 0 10px; position: relative; z-index: 5;">Procurement</div>
+                                    </div>
+                                    
+                                    <div class="connector-vertical" style="height: 20px;"></div>
+                                    
+                                    <!-- Second row -->
+                                    <div style="display: flex; width: 100%; position: relative;">
+                                        <div style="position: absolute; top: 50%; left: 0; right: 0; height: 4px; background-color: #333;"></div>
+                                        <div class="org-box function" style="flex: 1; margin: 0 10px; position: relative; z-index: 5;">Grants Finance: Post-Award</div>
+                                        <div class="org-box function" style="flex: 1; margin: 0 10px; position: relative; z-index: 5;">Compliance</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Right Column Functions -->
+                                <div class="function-group" style="width: 33%;">
+                                    <div class="connector-vertical" style="height: 30px;">
+                                        <div class="connector-arrow"></div>
+                                    </div>
+                                    <div class="org-box function">Partnerships</div>
+                                    <div class="function-connector"></div>
+                                    <div class="org-box function">Resource Mobilisation</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="org-hierarchy">
                     <h3>The Board of Directors, KEMRI</h3>
